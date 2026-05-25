@@ -1498,10 +1498,10 @@ body.dark-mode .hero-description{
 
 .preview-card::before{
     content:'';
-
     position:absolute;
-
     inset:0;
+
+    pointer-events:none;
 
     background:
     linear-gradient(
@@ -1568,6 +1568,9 @@ body.dark-mode .hero-description{
 }
 
 .preview-card a{
+
+    position:relative;
+    z-index:10;
 
     display:inline-block;
 
