@@ -1470,10 +1470,16 @@ body.dark-mode .hero-description{
 ========================= */
 
 .projects-preview{
+    width:min(1100px,95%);
+    margin:auto;
+
     display:flex;
-    justify-content:center;
-    padding:40px 0 180px;
+    flex-direction:column;
+    gap:40px;
+
+    padding:60px 0 120px;
 }
+
 
 .preview-card{
 
@@ -1607,4 +1613,55 @@ body.dark-mode .preview-card p{
     line-height:1.9;
     color:#666;
     font-weight:400;
+}
+
+.screen-card{
+    transition:.35s ease;
+}
+
+.screen-card:hover{
+    transform:translateY(-8px);
+}
+
+.preview-card{
+    cursor:pointer;
+}
+
+
+.preview-card a:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 35px rgba(0,0,0,.2);
+}
+
+
+.content-section{
+    position:relative;
+}
+
+.content-section::after{
+    content:"";
+    display:block;
+    width:100%;
+    height:1px;
+    margin-top:90px;
+    background:rgba(255,255,255,.06);
+}
+
+
+.screen-card{
+    overflow:hidden;
+    border-radius:24px;
+}
+
+.screen-card img{
+    transition:.4s ease;
+}
+
+.screen-card:hover img{
+    transform:scale(1.04);
+}
+
+
+.content-section a{
+    box-shadow:0 12px 35px rgba(37,99,235,.25);
 }

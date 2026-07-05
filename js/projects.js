@@ -35,7 +35,7 @@ function updateClock(){
 
 updateClock();
 
-setInterval(updateClock, 60000);
+setInterval(updateClock, 1000);
 
 
 
@@ -241,3 +241,29 @@ if(themeToggle){
     });
 
 }
+
+const sections = document.querySelectorAll(
+'.content-section, .overview, .hero'
+);
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.classList.add('show');
+
+        }
+
+    });
+
+},{
+    threshold:0.15
+});
+
+sections.forEach(section=>{
+
+    observer.observe(section);
+
+});

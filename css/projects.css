@@ -1777,3 +1777,80 @@ body.dark-mode .nav-slider{
 body.dark-mode .active-nav{
     color:#000 !important;
 }
+
+/* =========================
+   PROJECT CARDS
+========================= */
+
+.projects-grid{
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px auto 120px;
+
+    display: flex;
+    flex-direction: column;   /* One card below another */
+    gap: 30px;
+}
+
+.project-card{
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 28px;
+
+    padding: 40px;
+
+    transition: .35s ease;
+}
+
+.project-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,.12);
+}
+
+.project-card span{
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    background: #00ff88;
+    color: #000;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+.project-card h3{
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.project-card p{
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+body.dark-mode .project-card{
+    background: #171a21;
+}
+
+body.dark-mode .project-card p{
+    color: #b8b8b8;
+}
+
+.featured-project{
+    cursor:pointer;
+}
+
+.disabled{
+    opacity:.6;
+    cursor:not-allowed;
+    pointer-events:none;
+}
+
