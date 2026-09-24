@@ -21,7 +21,7 @@ script-src 'self' 'unsafe-inline';
           <meta name="google-site-verification" content="J63mxzo5NTlps2Jb2fzf58bJaL9-Kbn5qtkoJqquIPw" />
 
     <title>Chiranjeev Deka | UI/UX Designer</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
 
 
@@ -43,7 +43,7 @@ content="Chiranjeev Deka, UI UX Designer, UX Designer, Portfolio, Front End Deve
 href="https://chiranjeevdeka.com/">
 
 <meta name="theme-color"
-content="#0F1117">
+content="#0b0d10">
 
 <!-- Open Graph -->
 
@@ -91,11 +91,9 @@ content="https://chiranjeevdeka.com/assets/images/portfolio-preview.png">
 
     <!-- CSS -->
 
-    <link rel="stylesheet"
-      href="css/navbar.css" />
-
 <link rel="stylesheet"
       href="css/home.css" />
+<link rel="stylesheet" href="css/common.css" />
 
 
 
@@ -155,7 +153,7 @@ content="https://chiranjeevdeka.com/assets/images/portfolio-preview.png">
 
     <header class="navbar">
 
-        <nav class="nav-container">
+        <nav class="nav-container" aria-label="Main navigation">
 
 
 
@@ -164,7 +162,7 @@ content="https://chiranjeevdeka.com/assets/images/portfolio-preview.png">
             <div class="nav-links">
 
                 <a href="index.html"
-                   class="active-nav">
+                   class="active-nav" aria-current="page">
 
                     <span class="liquid-dot">
 
@@ -228,9 +226,7 @@ content="https://chiranjeevdeka.com/assets/images/portfolio-preview.png">
 
 
 
-<button id="themeToggle" class="theme-toggle">
-    🌙
-</button>
+<button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">&#9728;&#65039;</button>
     <!-- RESUME BUTTON -->
 
     <a href="assets/Chiranjeev_Deka_UIUX_Resume.pdf"
@@ -278,142 +274,66 @@ content="https://chiranjeevdeka.com/assets/images/portfolio-preview.png">
 
 <!-- HERO SECTION -->
 
-<section class="hero">
-
+<main>
+<section class="hero" aria-labelledby="home-title">
     <div class="hero-content">
-
-
-
-        <!-- STATUS BADGE -->
-
         <div class="status-badge">
-
-            <div class="status-dot"></div>
-
-            <span>
-                Currently Studying @Zee Institute Of Creative Art, Guwahati
-            </span>
-
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Currently studying at Zee Institute of Creative Art, Guwahati</span>
         </div>
 
-
-
-
-
-        <!-- HERO TITLE -->
-
-        <h1 class="hero-title">
-
-            <div class="line">
-                HI, I’M CHIRANJEEV.
-            </div>
-
-            <div class="line">
-
-                A
-
-                <span class="glitch"
-                      data-text="UI/UX DESIGNER">
-
-                    UI/UX DESIGNER
-
-                </span>
-
-            </div>
-
-            <div class="line">
-                BUILDING MODERN
-            </div>
-
-            <div class="line">
-                DIGITAL
-            </div>
-
-            <div class="line">
-                EXPERIENCES.
-            </div>
-
+        <h1 class="hero-title" id="home-title">
+            <span class="line">HI, I'M</span>
+            <span class="line">CHIRANJEEV.</span>
+            <span class="line"><span class="glitch">UI/UX DESIGNER</span></span>
         </h1>
-<p class="hero-description">
 
-UI/UX Designer and Graphic Designer creating intuitive digital products, modern interfaces and engaging user experiences for web, mobile and interactive platforms.
-
-</p>
-    </div>
-
-</section>
-
-
-
-
-
-    <!-- FEATURED PROJECTS -->
-
-    <section class="featured">
-
-        <h2>
-            FEATURED PROJECTS
-        </h2>
-
-        <p>
-
-           A collection of UI/UX projects focused on user research, visual design, prototyping, and front-end implementation.
-
+        <p class="hero-description">
+            I design clear, engaging digital products and interfaces for web and mobile.
         </p>
 
-    </section>
+        <div class="hero-actions">
+            <a class="hero-primary" href="projects.html">
+                Explore projects <span aria-hidden="true">&#8594;</span>
+            </a>
+            <a class="hero-secondary" href="about.html">About me</a>
+        </div>
+    </div>
+</section>
+<!-- FEATURED PROJECTS -->
 
-<section class="projects-preview">
-
-    <!-- NOIRE -->
-
-    <div class="preview-card">
-
-    <span class="preview-tag">
-        FEATURED PROJECT
-    </span>
-
-    <h3>NOIRE</h3>
-
-    <p>
-        Premium menswear e-commerce platform built with
-        authentication, wishlist, cart, Razorpay integration
-        and admin management.
-    </p>
-
-    <a href="noire.html">
-        View Case Study →
+<section class="featured reveal" aria-labelledby="featured-title">
+    <div class="featured-copy">
+        <span class="section-kicker">SELECTED WORK / 2026</span>
+        <h2 id="featured-title">Featured projects</h2>
+        <p>A selection of product and interface design work, from research and wireframes to polished experiences.</p>
+    </div>
+    <a class="all-projects-link" href="projects.html">
+        All projects <span aria-hidden="true">&#8594;</span>
     </a>
-
-</div>
-
-    <!-- VELIX -->
-
-    <div class="preview-card">
-
-        <span class="preview-tag">
-            CASE STUDY
-        </span>
-
-        <h3>VELIX</h3>
-
-        <p>
-            Modern mobile banking application focused on secure
-            transactions, intuitive navigation and clean user
-            experiences.
-        </p>
-
-        <a href="velix.html">
-            View Case Study →
-        </a>
-
-    </div>
-
 </section>
 
+<section class="projects-preview" aria-label="Featured case studies">
+    <article class="preview-card reveal">
+        <span class="preview-tag">01 / E-COMMERCE</span>
+        <h3>NOIRE</h3>
+        <p>A premium menswear shopping experience shaped around product discovery, a simpler checkout and clear order management.</p>
+        <a href="noire.html" aria-label="View the NOIRE case study">
+            View case study <span aria-hidden="true">&#8594;</span>
+        </a>
+    </article>
 
-
-<footer class="footer">
+    <article class="preview-card reveal">
+        <span class="preview-tag">02 / FINTECH</span>
+        <h3>VELIX</h3>
+        <p>A mobile banking concept that makes everyday money tasks easier to understand, navigate and trust.</p>
+        <a href="velix.html" aria-label="View the VELIX case study">
+            View case study <span aria-hidden="true">&#8594;</span>
+        </a>
+    </article>
+</section>
+</main>
+<footer class="site-footer">
 
     <div class="footer-content">
 
@@ -494,9 +414,7 @@ UI/UX Designer and Graphic Designer creating intuitive digital products, modern 
 
     <div class="footer-bottom">
 
-        <span>
-            © Chiranjeev Deka
-        </span>
+        <span class="footer-year"></span>
 
         <span>
             Designed and Built by Chiranjeev Deka
@@ -512,9 +430,10 @@ UI/UX Designer and Graphic Designer creating intuitive digital products, modern 
 
 <!-- JS -->
 
+<script src="js/common.js"></script>
 <script src="js/home.js"></script>
 
-<div id="cursor-trail"></div>
+
 </body>
 
 </html>

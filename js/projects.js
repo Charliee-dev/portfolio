@@ -1,269 +1,262 @@
-/* =========================
-   LIVE CLOCK
-========================= */
+/* =========================================================
+   PROJECTS PAGE INTERACTIONS
+========================================================= */
 
-function updateClock(){
+
+/* =========================================================
+   LIVE CLOCK
+========================================================= */
+
+function updateClock() {
+
+    const clock = document.getElementById("clock");
+
+    if (!clock) return;
 
     const now = new Date();
 
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
+    clock.textContent =
+        now.toLocaleTimeString("en-IN", {
+            hour: "numeric",
+            minute: "2-digit",
+            hour12: true
+        });
 
-    const ampm =
-    hours >= 12 ? 'PM' : 'AM';
-
-    hours = hours % 12;
-
-    hours = hours ? hours : 12;
-
-    minutes =
-    minutes < 10
-    ? '0' + minutes
-    : minutes;
-
-    const currentTime =
-    `${hours}:${minutes} ${ampm}`;
-
-    document
-    .getElementById('clock')
-    .textContent = currentTime;
 }
-
-
-
-/* START CLOCK */
 
 updateClock();
 
 setInterval(updateClock, 1000);
 
 
-
-
-
-/* =========================
-   NAVBAR INTERACTIONS
-========================= */
-
-const navLinks =
-document.querySelectorAll('.nav-links a');
-
-navLinks.forEach(link => {
-
-    link.addEventListener('mouseenter', () => {
-
-        if(
-            !link.classList.contains('active-nav')
-        ){
-
-            link.style.translate =
-'0 -2px';
-
-        }
-
-    });
-
-
-
-
-    link.addEventListener('mouseleave', () => {
-
-        link.style.translate =
-'0 0';
-
-    });
-
-});
-
-
-
-/* =========================
-   SMOOTH SCROLL
-========================= */
-
-document.documentElement.style.scrollBehavior =
-'smooth';
-
-
-
-/* =========================
-   LIQUID NAV SLIDER
-========================= */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 const navContainer =
-document.querySelector('.nav-links');
+    document.querySelector(".nav-links");
+
+const navLinks =
+    document.querySelectorAll(".nav-links a");
 
 const activeLink =
-document.querySelector('.active-nav');
+    document.querySelector(".active-nav");
 
-if(navContainer && activeLink){
+if (navContainer && activeLink) {
 
     const slider =
-    document.createElement('div');
+        document.createElement("div");
 
-    slider.classList.add('nav-slider');
+    slider.className = "nav-slider";
 
     navContainer.appendChild(slider);
 
-    function moveSlider(target){
+
+    function moveSlider(link) {
+
+        if (!link) return;
 
         slider.style.width =
-        `${target.offsetWidth}px`;
+            `${link.offsetWidth}px`;
 
         slider.style.transform =
-        `translate3d(${target.offsetLeft}px,0,0)`;
+            `translate3d(${link.offsetLeft}px, 0, 0)`;
 
     }
+
 
     moveSlider(activeLink);
 
-    document
-    .querySelectorAll('.nav-links a')
-    .forEach(link=>{
+
+    navLinks.forEach(link => {
 
         link.addEventListener(
-        'mouseenter',
-        ()=>{
-
-            moveSlider(link);
-
-        });
+            "mouseenter",
+            () => moveSlider(link)
+        );
 
     });
+
 
     navContainer.addEventListener(
-    'mouseleave',
-    ()=>{
+        "mouseleave",
+        () => moveSlider(activeLink)
+    );
 
-        moveSlider(activeLink);
 
-    });
+    window.addEventListener(
+        "resize",
+        () => moveSlider(activeLink)
+    );
 
 }
 
 
-/* =========================
-   CURSOR BUBBLES
-========================= */
-
-let bubbleCount = 0;
-
-document.addEventListener(
-'mousemove',
-(e)=>{
-
-    bubbleCount++;
-
-    if(bubbleCount % 20 !== 0) return;
-
-    const bubble =
-    document.createElement('div');
-
-    bubble.classList.add('bubble');
-
-    bubble.style.left =
-    `${e.clientX}px`;
-
-    bubble.style.top =
-    `${e.clientY}px`;
-
-    document.body.appendChild(
-    bubble
-    );
-
-    setTimeout(()=>{
-
-        bubble.remove();
-
-    },800);
-
-});
+/* =========================================================
+   THEME TOGGLE
+========================================================= */
 
 const themeToggle =
-document.getElementById('themeToggle');
+    document.getElementById("themeToggle");
 
-/* DEFAULT DARK MODE */
+if (themeToggle) {
 
-if(localStorage.getItem('theme') === null){
+    let savedTheme = "dark";
 
-    localStorage.setItem(
-    'theme',
-    'dark'
-    );
+    try {
+        savedTheme =
+            localStorage.getItem("theme") || "dark";
+    } catch {}
 
-}
+    if (savedTheme === "light") {
 
-if(
-localStorage.getItem('theme')
-=== 'dark'
-){
+        document.body.classList.add("light-mode");
 
-    document.body.classList.add(
-    'dark-mode'
-    );
+        themeToggle.textContent = "🌙";
+        themeToggle.setAttribute("aria-label", "Switch to dark mode");
 
-    if(themeToggle){
-        themeToggle.textContent='☀️';
+    } else {
+
+        themeToggle.textContent = "☀️";
+        themeToggle.setAttribute("aria-label", "Switch to light mode");
+
     }
 
-}
-else{
-
-    if(themeToggle){
-        themeToggle.textContent='🌙';
-    }
-
-}
-
-if(themeToggle){
 
     themeToggle.addEventListener(
-    'click',
-    ()=>{
+        "click",
+        () => {
 
-        document.body.classList.toggle(
-        'dark-mode'
-        );
+            document.body.classList.toggle(
+                "light-mode"
+            );
 
-        const dark =
-        document.body.classList.contains(
-        'dark-mode'
-        );
+            const light =
+                document.body.classList.contains(
+                    "light-mode"
+                );
 
-        localStorage.setItem(
-        'theme',
-        dark ? 'dark' : 'light'
-        );
+            try {
+                localStorage.setItem(
+                    "theme",
+                    light ? "light" : "dark"
+                );
+            } catch {}
 
-        themeToggle.textContent =
-        dark ? '☀️' : '🌙';
+            themeToggle.textContent =
+                light ? "🌙" : "☀️";
 
-    });
+            themeToggle.setAttribute(
+                "aria-label",
+                light ? "Switch to dark mode" : "Switch to light mode"
+            );
+
+        }
+    );
 
 }
 
-const sections = document.querySelectorAll(
-'.content-section, .overview, .hero'
-);
 
-const observer = new IntersectionObserver((entries)=>{
+/* =========================================================
+   PROJECT CARD INTERACTION
+========================================================= */
 
-    entries.forEach(entry=>{
+const cards =
+    document.querySelectorAll(
+        ".featured-project, .project-card"
+    );
 
-        if(entry.isIntersecting){
+cards.forEach(card => {
 
-            entry.classList.add('show');
+    card.addEventListener(
+        "mousemove",
+        event => {
+
+            const rect =
+                card.getBoundingClientRect();
+
+            const x =
+                event.clientX - rect.left;
+
+            const y =
+                event.clientY - rect.top;
+
+            const rotateX =
+                ((y / rect.height) - .5) * -2;
+
+            const rotateY =
+                ((x / rect.width) - .5) * 2;
+
+            card.style.transform =
+                `perspective(1200px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)
+                 translateY(-5px)`;
 
         }
+    );
 
-    });
 
-},{
-    threshold:0.15
+    card.addEventListener(
+        "mouseleave",
+        () => {
+
+            card.style.transform = "";
+
+        }
+    );
+
 });
 
-sections.forEach(section=>{
 
-    observer.observe(section);
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
 
-});
+const revealElements =
+    document.querySelectorAll(
+        ".project-card, .featured-project"
+    );
+
+
+const revealObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (
+                    entry.isIntersecting
+                ) {
+
+                    entry.target.classList.add(
+                        "visible"
+                    );
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: .12
+        }
+    );
+
+
+revealElements.forEach(
+    element =>
+        revealObserver.observe(element)
+);
+
+
+/* =========================================================
+   SMOOTH ANCHOR BEHAVIOUR
+========================================================= */
+
+document.documentElement.style.scrollBehavior =
+    "smooth";

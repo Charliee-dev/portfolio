@@ -1,0 +1,485 @@
+/* Shared portfolio design tokens. Load after each page stylesheet. */
+:root {
+    color-scheme: dark;
+    --bg: #0b0d10;
+    --bg-soft: #101318;
+    --surface: #14181e;
+    --surface-2: #181d24;
+    --text: #f4f5f6;
+    --text-soft: #b7bcc5;
+    --text-muted: #737985;
+    --line: rgba(255, 255, 255, .08);
+    --line-strong: rgba(255, 255, 255, .14);
+    --border: var(--line);
+    --border-strong: var(--line-strong);
+    --accent: #9daeff;
+    --accent-soft: rgba(157, 174, 255, .12);
+    --blue: var(--accent);
+    --cyan: #58d8ff;
+    --green: #9cffc9;
+    --green-soft: rgba(156, 255, 201, .12);
+    --max-width: 1240px;
+    --max: var(--max-width);
+    --radius: 24px;
+    --radius-small: 14px;
+    --shadow: 0 30px 90px rgba(0, 0, 0, .35);
+}
+
+body.light-mode {
+    color-scheme: light;
+    --bg: #f3f4f1;
+    --bg-soft: #e9ebe7;
+    --surface: #fff;
+    --surface-2: #eceeea;
+    --text: #111315;
+    --text-soft: #4d535b;
+    --text-muted: #747a82;
+    --line: rgba(0, 0, 0, .09);
+    --line-strong: rgba(0, 0, 0, .16);
+    --border: var(--line);
+    --border-strong: var(--line-strong);
+    --accent: #5878d9;
+    --blue: var(--accent);
+    --green: #4c8a48;
+    --green-soft: rgba(76, 138, 72, .1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { color: var(--text); }
+a { color: inherit; }
+button { font: inherit; }
+::selection { background: var(--accent); color: #090b0e; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+/* Legacy variable names in the case studies map to the project palette. */
+:root {
+    --accent-rgb: 157, 174, 255;
+    --green-rgb: 156, 255, 201;
+    --secondary: var(--text-soft);
+    --muted: var(--text-muted);
+    --cyan: var(--accent);
+    --surface-3: var(--surface-2);
+    --text-dim: var(--text-muted);
+    --black: #090b0e;
+    --white: #f4f5f6;
+    --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+body.light-mode {
+    --accent-rgb: 88, 120, 217;
+    --green-rgb: 76, 138, 72;
+    --secondary: var(--text-soft);
+    --muted: var(--text-muted);
+    --cyan: var(--accent);
+    --surface-3: var(--surface-2);
+    --text-dim: var(--text-muted);
+    --black: #090b0e;
+    --white: #111315;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 80% 10%, rgba(130, 145, 255, .07), transparent 30%),
+        radial-gradient(circle at 10% 45%, rgba(255, 255, 255, .025), transparent 30%),
+        var(--bg);
+    color: var(--text);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+body.light-mode {
+    background:
+        radial-gradient(circle at 80% 10%, rgba(88, 120, 217, .09), transparent 30%),
+        radial-gradient(circle at 10% 45%, rgba(0, 0, 0, .025), transparent 30%),
+        var(--bg);
+    color: var(--text);
+}
+
+body::before {
+    z-index: -1;
+    opacity: .025;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .5) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+body.light-mode::before {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, .05) 1px, transparent 1px);
+}
+
+/* Shared site navigation: the same shell on Home, Projects, About and case studies. */
+.navbar {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    padding: 26px 5vw;
+    border: 0;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: none;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nav-links {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(18, 21, 27, .72);
+    backdrop-filter: blur(18px);
+}
+
+body.light-mode .nav-links {
+    background: rgba(255, 255, 255, .76);
+}
+
+body.light-mode .navbar {
+    border: 0;
+    background: transparent;
+}
+
+.nav-links a {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: normal;
+    transform: none;
+    transition: color .3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active-nav {
+    color: var(--text);
+    transform: none;
+}
+
+.nav-slider {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 0;
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .07);
+    pointer-events: none;
+    transition: width .45s var(--transition), transform .45s var(--transition);
+}
+
+body.light-mode .nav-slider {
+    border-color: rgba(0, 0, 0, .06);
+    background: rgba(0, 0, 0, .06);
+}
+
+.liquid-dot {
+    position: relative;
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: var(--bg);
+}
+
+.inner-dot {
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.right-side,
+.live-info {
+    display: flex;
+    align-items: center;
+}
+
+.right-side {
+    gap: 14px;
+}
+
+.live-info {
+    gap: 18px;
+}
+
+.availability-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.availability-title {
+    color: var(--text-muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.availability-status {
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .6px;
+}
+
+.live-clock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 18px;
+    border-left: 1px solid var(--line);
+}
+
+.live-clock span {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.live-clock small {
+    color: var(--text-muted);
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.theme-toggle {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+    transition: transform .3s ease, background .3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(12deg);
+    background: var(--surface-2);
+}
+
+body.light-mode .availability-card,
+body.light-mode .live-clock {
+    background: transparent;
+}
+
+body.light-mode .theme-toggle {
+    background: var(--surface);
+}
+
+body.light-mode .nav-links a.active-nav {
+    color: var(--text);
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 11px 17px;
+    border-radius: 999px;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 12px;
+    font-weight: 700;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.resume-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, .08);
+}
+
+body.light-mode .resume-btn {
+    border: 0;
+    background: var(--text);
+    color: var(--bg);
+}
+
+.nav-links a:focus-visible,
+.theme-toggle:focus-visible,
+.resume-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* Shared footer for project detail pages. */
+.site-footer {
+    border-top: 1px solid var(--line);
+    background: rgba(0, 0, 0, .15);
+    padding: 90px 5vw 30px;
+}
+
+.site-footer .footer-content {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.site-footer .footer-left h2 {
+    color: var(--text);
+    font-size: 28px;
+    letter-spacing: -.04em;
+}
+
+.site-footer .footer-left p {
+    max-width: 350px;
+    margin-top: 14px;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.site-footer .footer-links,
+.site-footer .footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.site-footer h4 {
+    margin-bottom: 12px;
+    color: var(--text-muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.site-footer a {
+    width: fit-content;
+    color: var(--text-soft);
+    font-size: 12px;
+    transition: color .25s ease, transform .25s ease;
+}
+
+.site-footer a:hover {
+    color: var(--text);
+    transform: translateX(4px);
+}
+
+.site-footer .footer-bottom {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 70px auto 0;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-muted);
+    font-size: 10px;
+}
+
+@media (max-width: 1000px) {
+    .live-info {
+        display: none;
+    }
+
+    .site-footer .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-container {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .nav-links {
+        gap: 2px;
+    }
+
+    .nav-links a {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+
+    .right-side {
+        gap: 8px;
+    }
+
+    .resume-btn {
+        width: 38px;
+        height: 38px;
+        padding: 0;
+    }
+
+    .resume-btn span {
+        display: none;
+    }
+
+    .resume-btn svg {
+        width: 17px;
+    }
+
+    .site-footer {
+        padding: 70px 20px 25px;
+    }
+
+    .site-footer .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 25px;
+    }
+
+    .site-footer .footer-left {
+        grid-column: 1 / -1;
+    }
+
+    .site-footer .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 430px) {
+    .nav-links a {
+        padding: 8px 9px;
+        font-size: 10px;
+    }
+
+    .theme-toggle {
+        display: none;
+    }
+}

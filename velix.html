@@ -1,545 +1,1420 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
 
-<meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <title>VELIX | Banking App UI/UX Case Study | Chiranjeev Deka</title>
 
-<title>VELIX | Banking App UI/UX Case Study | Chiranjeev Deka</title>
+    <meta name="description"
+          content="VELIX mobile banking UI/UX case study by Chiranjeev Deka featuring research, user flows, design system and high-fidelity screens.">
 
-<meta name="description"
-content="Explore VELIX, a modern mobile banking app UI/UX case study by Chiranjeev Deka featuring user research, wireframes, design system, high-fidelity interfaces and interactive Figma prototypes.">
+    <meta name="author"
+          content="Chiranjeev Deka">
 
-<meta name="author"
-content="Chiranjeev Deka">
+    <meta name="robots"
+          content="index, follow">
 
-<meta name="robots"
-content="index, follow">
+    <link rel="canonical"
+          href="https://chiranjeevdeka.com/velix.html">
 
-<meta name="keywords"
-content="VELIX, Banking App UI, UI UX Case Study, Mobile Banking Design, Product Design, Figma, Chiranjeev Deka">
+    <link rel="icon"
+          type="image/svg+xml"
+          href="assets/favicon.svg">
 
-<link rel="canonical"
-href="https://chiranjeevdeka.com/velix.html">
+    <meta name="theme-color"
+          content="#0b0d10">
 
-<meta name="theme-color"
-content="#0F1117">
+    <!-- Open Graph -->
 
-<link rel="icon"
-type="image/png"
-href="images/favicon.png">
+    <meta property="og:type"
+          content="website">
 
-<!-- Open Graph -->
+    <meta property="og:title"
+          content="VELIX | Banking App UI/UX Case Study">
 
-<meta property="og:type"
-content="website">
+    <meta property="og:description"
+          content="Modern banking application case study by Chiranjeev Deka.">
 
-<meta property="og:title"
-content="VELIX | Banking App UI/UX Case Study">
+    <meta property="og:url"
+          content="https://chiranjeevdeka.com/velix.html">
 
-<meta property="og:description"
-content="A modern banking application designed with user research, design systems and interactive prototypes.">
+    <meta property="og:image"
+          content="https://chiranjeevdeka.com/assets/images/portfolio-preview.png">
 
-<meta property="og:url"
-content="https://chiranjeevdeka.com/velix.html">
+    <!-- CSS -->
 
-<meta property="og:image"
-content="https://chiranjeevdeka.com/assets/images/portfolio-preview.png">
-
-<meta property="og:image:width"
-content="1200">
-
-<meta property="og:image:height"
-content="630">
-
-<meta property="og:image:alt"
-content="VELIX Banking App Case Study">
-
-<!-- Twitter -->
-
-<meta name="twitter:card"
-content="summary_large_image">
-
-<meta name="twitter:title"
-content="VELIX | Banking App UI/UX Case Study">
-
-<meta name="twitter:description"
-content="Modern banking application case study by Chiranjeev Deka.">
-
-<meta name="twitter:image"
-content="https://chiranjeevdeka.com/assets/images/portfolio-preview.png">
-
-<link rel="stylesheet"
-href="css/velix.css">
-
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"CreativeWork",
-  "name":"VELIX Banking App UI/UX Case Study",
-  "url":"https://chiranjeevdeka.com/velix.html",
-  "author":{
-    "@type":"Person",
-    "name":"Chiranjeev Deka"
-  },
-  "image":"https://chiranjeevdeka.com/assets/images/portfolio-preview.png",
-  "description":"A modern mobile banking app UI/UX case study featuring user research, wireframes, design systems and interactive prototypes."
-}
-</script>
+    <link rel="stylesheet"
+          href="css/velix.css">
+    <link rel="stylesheet" href="css/common.css">
 
 </head>
 
+
 <body>
 
-<header class="navbar">
+    <!-- BACKGROUND EFFECTS -->
 
-  <a href="projects.html" class="back-btn">
-    ← Back to Projects
-  </a>
+    <div class="grid-bg"></div>
 
-</header>
+    <div class="progress"></div>
 
-<section class="hero">
 
-  <span class="tag">
-   PRODUCT DESIGN CASE STUDY
-  </span>
+    <!-- NAVIGATION -->
 
-  <h1>VELIX</h1>
+    <header class="navbar">
+        <nav class="nav-container" aria-label="Main navigation">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active-nav" aria-current="page"><span class="liquid-dot"><span class="inner-dot"></span></span>Projects</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="right-side">
+                <div class="live-info">
+                    <div class="availability-card">
+                        <span class="availability-title">AVAILABLE FOR</span>
+                        <span class="availability-status">UI/UX INTERNSHIPS</span>
+                    </div>
+                    <div class="live-clock">
+                        <span id="clock">00:00</span>
+                        <small>LOCAL TIME</small>
+                    </div>
+                </div>
+                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">&#9728;&#65039;</button>
+                <a href="assets/Chiranjeev_Deka_UIUX_Resume.pdf" download class="resume-btn">
+                    <span>Download Resume</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
 
-  <div class="hero-image">
-  <img src="images/velix-cover.png" alt="VELIX Banking App Cover">
-</div>
 
-  <p>
-VELIX is a modern mobile banking application designed to simplify everyday financial management through intuitive navigation, secure transactions and a clean user experience. The project focuses on helping users complete common banking tasks quickly while maintaining trust, accessibility and consistency across the interface.
-</p>
+    <main>
 
-</section>
 
-<section class="overview">
+        <!-- HERO -->
 
-  <h2>Project Overview</h2>
+        <section class="hero reveal">
 
-  <div class="overview-grid">
+            <div class="hero-line">
 
-    <div>
-      <h4>Role</h4>
-      <p>UI/UX Designer & Product Designer</p>
+                <span class="tag">
+
+                    <i></i>
+
+                    PRODUCT DESIGN CASE STUDY
+
+                </span>
+
+                <small>
+                    VELIX / 2026
+                </small>
+
+            </div>
+
+
+            <div class="hero-copy">
+                <p class="eyebrow">
+                    DIGITAL BANKING EXPERIENCE
+                </p>
+
+                <h1>
+                    VELIX<span>.</span>
+                </h1>
+
+                <p class="lead">
+                    A modern mobile banking experience designed
+                    to make everyday financial actions faster,
+                    clearer and more trustworthy.
+                </p>
+            </div>
+
+
+            <!-- HERO IMAGE -->
+
+            <div class="hero-media">
+
+                <img
+                    src="assets/images/dashboard.png"
+                    alt="VELIX mobile banking dashboard interface"
+                >
+
+                <span>
+                    EXPLORE CASE STUDY ↘
+                </span>
+
+            </div>
+
+
+            <!-- PROJECT META -->
+
+            <div class="meta">
+
+                <div>
+
+                    <small>
+                        ROLE
+                    </small>
+
+                    <b>
+                        UI/UX Designer · Product Designer
+                    </b>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        PLATFORM
+                    </small>
+
+                    <b>
+                        Android · iOS
+                    </b>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        TOOLS
+                    </small>
+
+                    <b>
+                        Figma · FigJam · Photoshop
+                    </b>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        DURATION
+                    </small>
+
+                    <b>
+                        4 Weeks
+                    </b>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- OVERVIEW -->
+
+        <section
+            class="section reveal"
+            id="overview">
+
+            <div class="marker">
+                01 / OVERVIEW
+            </div>
+
+
+            <div class="intro">
+
+                <h2>
+                    Designing a calmer way
+                    to manage money.
+                </h2>
+
+                <p>
+
+                    VELIX focuses on the everyday banking
+                    actions people need most, while reducing
+                    the visual and cognitive friction found
+                    in feature-heavy financial apps.
+
+                </p>
+
+            </div>
+
+
+            <div class="overview">
+
+                <article>
+
+                    <small>
+                        ROLE
+                    </small>
+
+                    <b>
+                        UI/UX Designer &
+                        Product Designer
+                    </b>
+
+                    <em>
+                        Research · UX · UI
+                    </em>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        DURATION
+                    </small>
+
+                    <b>
+                        4 Weeks
+                    </b>
+
+                    <em>
+                        Concept project
+                    </em>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        TOOLS
+                    </small>
+
+                    <b>
+                        Figma · FigJam · Photoshop
+                    </b>
+
+                    <em>
+                        Design & prototyping
+                    </em>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        PLATFORM
+                    </small>
+
+                    <b>
+                        Android & iOS
+                    </b>
+
+                    <em>
+                        Mobile-first
+                    </em>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        TYPE
+                    </small>
+
+                    <b>
+                        Concept Banking Application
+                    </b>
+
+                    <em>
+                        Product design case study
+                    </em>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SNAPSHOT -->
+
+        <section class="section reveal">
+
+            <div class="marker">
+                02 / SNAPSHOT
+            </div>
+
+
+            <div class="stats">
+
+                <article>
+
+                    <b>
+                        18<span>+</span>
+                    </b>
+
+                    <small>
+                        DESIGNED SCREENS
+                    </small>
+
+                </article>
+
+
+                <article>
+
+                    <b>
+                        30<span>+</span>
+                    </b>
+
+                    <small>
+                        REUSABLE COMPONENTS
+                    </small>
+
+                </article>
+
+
+                <article>
+
+                    <b>
+                        01
+                    </b>
+
+                    <small>
+                        DESIGN SYSTEM
+                    </small>
+
+                </article>
+
+
+                <article>
+
+                    <b>
+                        05
+                    </b>
+
+                    <small>
+                        CORE USER FLOWS
+                    </small>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROBLEM -->
+
+        <section class="section reveal split">
+
+            <div class="marker">
+                03 / PROBLEM
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Banking shouldn't feel
+                    like navigating a
+                    control panel.
+                </h2>
+
+
+                <p>
+
+                    Many banking applications contain
+                    numerous financial services that
+                    overwhelm users and make common
+                    actions slower than necessary.
+
+                </p>
+
+
+                <p>
+
+                    VELIX was designed to reduce
+                    interface complexity and prioritize
+                    essential tasks such as checking
+                    balances, transferring money and
+                    managing transactions.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- GOALS -->
+
+        <section class="section reveal">
+
+            <div class="marker">
+                04 / GOALS
+            </div>
+
+
+            <div class="cards four">
+
+                <article>
+
+                    <small>
+                        01
+                    </small>
+
+                    <h3>
+                        Clarity
+                    </h3>
+
+                    <p>
+                        Make important information
+                        immediately visible.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        02
+                    </small>
+
+                    <h3>
+                        Speed
+                    </h3>
+
+                    <p>
+                        Reduce steps for common
+                        financial actions.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        03
+                    </small>
+
+                    <h3>
+                        Trust
+                    </h3>
+
+                    <p>
+                        Use consistent feedback
+                        to make actions feel reliable.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        04
+                    </small>
+
+                    <h3>
+                        Scalability
+                    </h3>
+
+                    <p>
+                        Build reusable components
+                        for future growth.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FEATURES -->
+
+        <section class="section reveal">
+
+            <div class="marker">
+                05 / CORE FEATURES
+            </div>
+
+
+            <div class="features">
+
+                <span>
+                    User Authentication
+                </span>
+
+                <span>
+                    Secure Login
+                </span>
+
+                <span>
+                    PIN Verification
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+                <span>
+                    Money Transfer
+                </span>
+
+                <span>
+                    Transaction History
+                </span>
+
+                <span>
+                    Card Management
+                </span>
+
+                <span>
+                    Notifications
+                </span>
+
+                <span>
+                    Profile Management
+                </span>
+
+                <span>
+                    Payment Confirmation
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- COMPETITIVE ANALYSIS -->
+
+        <section class="section reveal">
+
+            <div class="marker">
+                06 / COMPETITIVE LANDSCAPE
+            </div>
+
+
+            <div class="intro">
+
+                <h2>
+                    Learning from familiar
+                    financial products.
+                </h2>
+
+                <p>
+
+                    I analyzed Google Pay, PhonePe,
+                    Paytm, Revolut and Monzo with a
+                    focus on navigation patterns,
+                    dashboard layouts, transaction
+                    workflows and visual consistency.
+
+                </p>
+
+            </div>
+
+
+            <div class="competitors">
+
+                <article>
+
+                    <b>
+                        Google Pay
+                    </b>
+
+                    <span>
+                        Simple onboarding ·
+                        Fast QR payments
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <b>
+                        PhonePe
+                    </b>
+
+                    <span>
+                        Strong UPI ·
+                        Feature-rich navigation
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <b>
+                        Paytm
+                    </b>
+
+                    <span>
+                        Comprehensive ·
+                        Information-heavy
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <b>
+                        Revolut
+                    </b>
+
+                    <span>
+                        Premium UI ·
+                        Budgeting
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <b>
+                        Monzo
+                    </b>
+
+                    <span>
+                        Minimal ·
+                        Clear history
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DESIGN DECISIONS -->
+
+        <section class="section reveal">
+
+            <div class="marker">
+                07 / DESIGN DECISIONS
+            </div>
+
+
+            <div class="cards four">
+
+                <article>
+
+                    <small>
+                        01
+                    </small>
+
+                    <h3>
+                        Balance first
+                    </h3>
+
+                    <p>
+                        Account balance became
+                        the primary dashboard anchor.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        02
+                    </small>
+
+                    <h3>
+                        Less noise
+                    </h3>
+
+                    <p>
+                        Secondary information
+                        was reduced.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        03
+                    </small>
+
+                    <h3>
+                        Primary actions
+                    </h3>
+
+                    <p>
+                        Transfer and Scan QR
+                        receive clear priority.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        04
+                    </small>
+
+                    <h3>
+                        Readable dark UI
+                    </h3>
+
+                    <p>
+                        A controlled dark theme
+                        supports hierarchy.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- USERS -->
+
+        <section class="section reveal">
+
+            <div class="marker">
+                08 / TARGET USERS
+            </div>
+
+
+            <div class="users">
+
+                <article>
+
+                    <small>
+                        PRIMARY USERS
+                    </small>
+
+                    <ul>
+
+                        <li>
+                            Working professionals
+                        </li>
+
+                        <li>
+                            College students
+                        </li>
+
+                        <li>
+                            Small business owners
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        USER GOALS
+                    </small>
+
+                    <ul>
+
+                        <li>
+                            Check balance quickly
+                        </li>
+
+                        <li>
+                            Transfer money securely
+                        </li>
+
+                        <li>
+                            Pay bills efficiently
+                        </li>
+
+                        <li>
+                            Monitor transactions
+                        </li>
+
+                        <li>
+                            Manage cards
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        PAIN POINTS
+                    </small>
+
+                    <ul>
+
+                        <li>
+                            Cluttered interfaces
+                        </li>
+
+                        <li>
+                            Unnecessary features
+                        </li>
+
+                        <li>
+                            Complex navigation
+                        </li>
+
+                        <li>
+                            Unclear financial overview
+                        </li>
+
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- USER FLOW -->
+
+        <section class="section reveal">
+
+            <div class="marker">
+                09 / USER FLOW
+            </div>
+
+
+            <div class="flow">
+
+                <span>
+                    01
+                    <b>Login</b>
+                </span>
+
+                <i>→</i>
+
+                <span>
+                    02
+                    <b>Dashboard</b>
+                </span>
+
+                <i>→</i>
+
+                <span>
+                    03
+                    <b>Transfer</b>
+                </span>
+
+                <i>→</i>
+
+                <span>
+                    04
+                    <b>Amount</b>
+                </span>
+
+                <i>→</i>
+
+                <span>
+                    05
+                    <b>Confirm</b>
+                </span>
+
+                <i>→</i>
+
+                <span>
+                    06
+                    <b>Success</b>
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DESIGN SYSTEM -->
+
+        <section class="section reveal">
+
+            <div class="marker">
+                10 / DESIGN SYSTEM
+            </div>
+
+
+            <div class="system">
+
+                <div>
+
+                    <h2>
+                        A visual language
+                        built to scale.
+                    </h2>
+
+                    <p>
+
+                        The VELIX system defines
+                        colors, typography, buttons,
+                        inputs, cards, icons, spacing
+                        and reusable UI components.
+
+                    </p>
+
+                </div>
+
+
+                <div class="system-box">
+
+                    <div class="swatches">
+
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+
+                    </div>
+
+
+                    <strong>
+                        Aa
+                    </strong>
+
+
+                    <small>
+                        Bold / Regular / Medium
+                    </small>
+
+
+                    <button>
+                        Primary Action
+                    </button>
+
+
+                    <div class="input">
+                        Transaction amount
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FINAL UI -->
+
+        <section class="section reveal">
+
+            <div class="marker">
+                11 / FINAL UI
+            </div>
+
+
+            <div class="intro">
+
+                <h2>
+                    High-fidelity screens
+                    for the complete
+                    banking experience.
+                </h2>
+
+                <p>
+
+                    With the design system in place,
+                    I refined the final interfaces with a focus
+                    on clarity, consistency,
+                    accessibility and efficient
+                    financial management.
+
+                </p>
+
+            </div>
+
+
+            <div class="gallery final">
+
+
+                <button
+                    class="featured"
+                    data-image="assets/images/dashboard.png">
+
+                    <img
+                        src="assets/images/dashboard.png"
+                        alt="VELIX Dashboard">
+
+                    <b>
+                        01 / Dashboard
+                    </b>
+
+                </button>
+
+
+                <button
+                    data-image="assets/images/transfer.png">
+
+                    <img
+                        src="assets/images/transfer.png"
+                        alt="VELIX Transfer">
+
+                    <b>
+                        02 / Transfer Money
+                    </b>
+
+                </button>
+
+
+                <button
+                    data-image="assets/images/transactions.png">
+
+                    <img
+                        src="assets/images/transactions.png"
+                        alt="VELIX Transactions">
+
+                    <b>
+                        03 / Transactions
+                    </b>
+
+                </button>
+
+
+                <button
+                    data-image="assets/images/cards.png">
+
+                    <img
+                        src="assets/images/cards.png"
+                        alt="VELIX Cards">
+
+                    <b>
+                        04 / Cards
+                    </b>
+
+                </button>
+
+
+                <button
+                    data-image="assets/images/profile.png">
+
+                    <img
+                        src="assets/images/profile.png"
+                        alt="VELIX Profile">
+
+                    <b>
+                        05 / Profile
+                    </b>
+
+                </button>
+
+
+                <button
+                    data-image="assets/images/payment-success.png">
+
+                    <img
+                        src="assets/images/payment-success.png"
+                        alt="VELIX Payment Successful">
+
+                    <b>
+                        06 / Payment Successful
+                    </b>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROTOTYPE -->
+
+        <section class="section reveal">
+
+            <div class="marker">
+                12 / PROTOTYPE
+            </div>
+
+
+            <div class="prototype">
+
+                <div>
+
+                    <small>
+                        FIGMA PROTOTYPE
+                    </small>
+
+                    <h2>
+                        Experience the
+                        product flow.
+                    </h2>
+
+                    <p>
+
+                        The interactive prototype
+                        simulates authentication,
+                        dashboard navigation,
+                        money transfers and
+                        profile management.
+
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="https://www.figma.com/design/RUbV7QR14EIUo0KyuSrz0a/VELIX-Banking-App?node-id=0-1&t=E9kWwuvUDdPuyXvy-1"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Open Prototype ↗
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- OUTCOME -->
+
+        <section class="section reveal">
+
+            <div class="marker">
+                13 / OUTCOME
+            </div>
+
+
+            <div class="cards four">
+
+                <article>
+
+                    <small>
+                        01
+                    </small>
+
+                    <h3>
+                        Complete workflow
+                    </h3>
+
+                    <p>
+                        Designed the banking
+                        journey from authentication
+                        to payment.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        02
+                    </small>
+
+                    <h3>
+                        Reusable system
+                    </h3>
+
+                    <p>
+                        Created a scalable component
+                        and visual system.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        03
+                    </small>
+
+                    <h3>
+                        18+ screens
+                    </h3>
+
+                    <p>
+                        Translated product structure
+                        into a cohesive mobile experience.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <small>
+                        04
+                    </small>
+
+                    <h3>
+                        Prototype
+                    </h3>
+
+                    <p>
+                        Connected key screens
+                        into a realistic product flow.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- REFLECTION -->
+
+        <section class="section reveal split">
+
+            <div class="marker">
+                14 / REFLECTION
+            </div>
+
+
+            <div>
+
+                <h2>
+                    What I learned.
+                </h2>
+
+
+                <p>
+
+                    Designing VELIX strengthened
+                    my understanding of user-centered
+                    design, information hierarchy,
+                    design systems and financial
+                    product workflows.
+
+                </p>
+
+
+                <p>
+
+                    If I continue improving this
+                    project, I would conduct usability
+                    testing with real users, refine
+                    onboarding and expand budgeting
+                    and analytics features.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <small>
+            NEXT CASE STUDY
+        </small>
+
+
+        <h2>
+            Keep exploring.
+        </h2>
+
+
+        <div>
+
+            <a href="projects.html">
+                ← Back to Projects
+            </a>
+
+            <a href="noire.html">
+                NOIRE →
+            </a>
+
+        </div>
+
+    </footer>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>CHIRANJEEV</h2>
+                <p>UI/UX Designer crafting modern digital experiences through design, motion and interaction.</p>
+            </div>
+            <div class="footer-links">
+                <h4>NAVIGATION</h4>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-links">
+                <h4>CONNECT</h4>
+                <a href="https://www.instagram.com/chiranjeevdeka_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="mailto:chiranjeevdeka@outlook.in">Email</a>
+            </div>
+            <div class="footer-socials">
+                <h4>SHOWCASE</h4>
+                <a href="https://github.com/Charliee-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/chiranjeevdekauiux/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Chiranjeev Deka. All Rights Reserved.</span>
+            <span>Designed and Built by Chiranjeev Deka</span>
+        </div>
+    </footer>
+
+
+
+    <!-- IMAGE LIGHTBOX -->
+
+    <div
+        class="lightbox"
+        id="lightbox"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Project image preview">
+
+        <button id="close" type="button" aria-label="Close image preview">
+            ×
+        </button>
+
+        <img
+            id="viewer"
+            alt="Expanded project image">
+
+        <span id="caption"></span>
+
     </div>
 
-    <div>
-      <h4>Duration</h4>
-      <p>4 Weeks</p>
-    </div>
 
-    <div>
-      <h4>Tools</h4>
-      <p>Figma, FigJam, Photoshop</p>
-    </div>
 
-    <div>
-      <h4>Platform</h4>
-      <p>Android & iOS</p>
-    </div>
+    <!-- JAVASCRIPT -->
 
-
-    <div>
-      <h4>Project Type</h4>
-      <p>Concept Banking Application</p>
-    </div>
-
-
-  </div>
-
-</section>
-
-
-<section class="content-section">
-
-<h2>Project Summary</h2>
-
-<div class="overview-grid">
-
-<div>
-<h3>18+</h3>
-<p>Screens</p>
-</div>
-
-<div>
-<h3>30+</h3>
-<p>Components</p>
-</div>
-
-<div>
-<h3>1</h3>
-<p>Design System</p>
-</div>
-
-<div>
-<h3>5</h3>
-<p>User Flows</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="content-section">
-
-  <h2>Core Features</h2>
-
-<ul>
-
-<li>User Authentication</li>
-
-<li>Secure Login</li>
-
-<li>PIN Verification</li>
-
-<li>Dashboard</li>
-
-<li>Money Transfer</li>
-
-<li>Transaction History</li>
-
-<li>Card Management</li>
-
-<li>Notifications</li>
-
-<li>Profile Management</li>
-
-<li>Payment Confirmation</li>
-
-</ul>
-
-</section>
-
-<section class="content-section">
-
-  <h2>The Problem</h2>
-
-<p>
-
-Many banking applications contain numerous financial services that overwhelm users and make common actions slower than necessary.
-
-VELIX was designed to reduce interface complexity and prioritize essential banking tasks such as checking balances, transferring money and managing transactions through a modern, intuitive interface.
-
-</p>
-
-</section>
-
-<section class="content-section">
-
-  <h2>Goals</h2>
-
-<ul>
-
-<li>Create a clean banking experience</li>
-
-<li>Improve navigation</li>
-
-<li>Reduce user effort</li>
-
-<li>Build trust through design</li>
-
-<li>Create a scalable Design System</li>
-
-<li>Maintain accessibility</li>
-
-</ul>
-
-</section>
-
-
-<section class="content-section">
-
-<h2>Competitor Analysis</h2>
-
-<p>
-To better understand existing banking experiences, I analyzed leading financial applications including Google Pay, PhonePe, Paytm, Revolut and Monzo. The research focused on navigation patterns, dashboard layouts, transaction workflows, and visual consistency.
-</p>
-
-<ul>
-
-<li>Google Pay – Simple onboarding and fast QR payments.</li>
-
-<li>PhonePe – Strong UPI experience with feature-rich navigation.</li>
-
-<li>Paytm – Comprehensive ecosystem but information-heavy interface.</li>
-
-<li>Revolut – Premium UI with excellent budgeting features.</li>
-
-<li>Monzo – Minimal interface and clear transaction history.</li>
-
-</ul>
-
-</section>
-
-<section class="content-section">
-
-<h2>Design Decisions</h2>
-
-<ul>
-
-<li>Prioritized account balance on the dashboard.</li>
-
-<li>Reduced visual clutter.</li>
-
-<li>Used consistent spacing and typography.</li>
-
-<li>Highlighted primary actions like Transfer and Scan QR.</li>
-
-<li>Maintained a minimal dark theme to improve readability.</li>
-
-</ul>
-
-</section>
-
-
-<section class="content-section">
-
-<h2>Target Users</h2>
-
-<h3>Primary Users</h3>
-
-<ul>
-<li>Working professionals managing daily finances</li>
-<li>College students using UPI and digital banking</li>
-<li>Small business owners handling frequent transactions</li>
-</ul>
-
-<h3>User Goals</h3>
-
-<ul>
-<li>Check account balance quickly</li>
-<li>Transfer money securely</li>
-<li>Pay bills efficiently</li>
-<li>Monitor transaction history</li>
-<li>Manage cards from one place</li>
-</ul>
-
-<h3>Pain Points</h3>
-
-<ul>
-<li>Cluttered banking interfaces</li>
-<li>Too many unnecessary features</li>
-<li>Complex navigation for everyday tasks</li>
-<li>Lack of clear financial overview</li>
-</ul>
-
-</section>
-
-
-<section class="content-section">
-
-<h2>User Flow</h2>
-
-<ul class="flow-list">
-  <li>Login</li>
-  <li>→</li>
-  <li>Dashboard</li>
-  <li>→</li>
-  <li>Transfer Money</li>
-  <li>→</li>
-  <li>Enter Amount</li>
-  <li>↓</li>
-  <li>Confirm Payment</li>
-  <li>→</li>
-  <li>Payment Successful</li>
-</ul>
-
-</section>
-
-
-<section class="content-section">
-
-<h2>Low-Fidelity Wireframes</h2>
-
-<p>
-
-Before creating the final interface, I explored different layouts using low-fidelity wireframes. This helped establish the information hierarchy, navigation structure and placement of primary banking actions before moving into visual design.
-
-</p>
-
-<div class="screens-grid">
-
-<img src="images/wireframe-dashboard.png" alt="Dashboard Wireframe">
-
-<img src="images/wireframe-transfer.png" alt="Transfer Wireframe">
-
-<img src="images/wireframe-profile.png" alt="Profile Wireframe">
-
-</div>
-
-</section>
-
-
-<section class="content-section">
-
-<h2>Design System</h2>
-
-<p>
-To maintain consistency across the application, I created a reusable design system. It defines the visual language of VELIX, including colors, typography, buttons, input fields, cards, icons, spacing, and reusable UI components.
-</p>
-
-<h3>Colors</h3>
-
-<ul>
-<li>Primary – Blue</li>
-<li>Background – Dark Gray</li>
-<li>Surface – Charcoal</li>
-<li>Success – Green</li>
-<li>Error – Red</li>
-<li>Text – White & Gray</li>
-</ul>
-
-<h3>Typography</h3>
-
-<ul>
-<li>Heading – Bold</li>
-<li>Body – Regular</li>
-<li>Caption – Medium</li>
-</ul>
-
-<h3>Components</h3>
-
-<ul>
-<li>Buttons</li>
-<li>Input Fields</li>
-<li>Cards</li>
-<li>Navigation Bar</li>
-<li>Transaction List</li>
-<li>Profile Cards</li>
-</ul>
-
-</section>
-
-<section class="content-section">
-
-<h2>Final UI</h2>
-
-<p>
-After validating the wireframes and design system, I designed the final high-fidelity interfaces. The focus was on clarity, consistency, accessibility, and efficient financial management.
-</p>
-
-<div class="screens-grid">
-
-<div class="screen-card">
-    <img src="assets/images/dashboard.png" alt="Dashboard">
-    <p>Dashboard</p>
-</div>
-
-<div class="screen-card">
-    <img src="assets/images/transfer.png" alt="Transfer Money">
-    <p>Transfer Money</p>
-</div>
-
-<div class="screen-card">
-    <img src="assets/images/transactions.png" alt="Transactions">
-    <p>Transactions</p>
-</div>
-
-<div class="screen-card">
-    <img src="assets/images/cards.png" alt="Cards">
-    <p>Cards</p>
-</div>
-
-<div class="screen-card">
-    <img src="assets/images/profile.png" alt="Profile">
-    <p>Profile</p>
-</div>
-
-<div class="screen-card">
-    <img src="assets/images/payment-success.png" alt="Payment Successful">
-    <p>Payment Successful</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="content-section">
-
-<h2>Interactive Prototype</h2>
-
-<p>
-An interactive prototype was created in Figma to simulate the complete banking experience, including authentication, dashboard navigation, money transfers, and profile management.
-</p>
-
-<section class="links">
-
-<a href="https://www.figma.com/design/RUbV7QR14EIUo0KyuSrz0a/VELIX-Banking-App?node-id=0-1&t=E9kWwuvUDdPuyXvy-1"
-   target="_blank"
-   rel="noopener noreferrer">
-   View Figma Prototype →
-</a>
-
-</section>
-
-</section>
-
-
-<section class="content-section">
-
-<h2>Reflection</h2>
-
-<p>
-Designing VELIX strengthened my understanding of user-centered design, information hierarchy, design systems, and financial product workflows. Throughout the project, I learned how research, user flows, wireframes, and visual design work together to create intuitive digital experiences.
-
-If I continue improving this project, I would conduct usability testing with real users, refine the onboarding experience, and expand the budgeting and analytics features.
-</p>
-
-</section>
-
-
-
-<section class="content-section">
-
-  <h2>Project Outcomes</h2>
-
-<ul>
-
-<li>Designed complete banking workflow</li>
-
-<li>Created reusable design system</li>
-
-<li>Designed over 15 mobile screens</li>
-
-<li>Built interactive prototype</li>
-
-<li>Improved usability through simplified navigation</li>
-
-</ul>
-
-</section>
-
-<section class="content-section">
-
-  <h2>Design Process</h2>
-
-<p>
-
-The project started with competitor analysis of Google Pay, PhonePe, Paytm, Revolut and Monzo.
-
-Research findings were translated into user flows, wireframes and a scalable design system before creating high-fidelity interfaces and interactive prototypes.
-
-</p>
-
-
-</section>
-
-<section class="links">
-
-<a href="projects.html">← Back to Projects</a>
-
-<a href="noire.html">Next Project →</a>
-
-</section>
+    <script src="js/common.js"></script>
+    <script src="js/velix.js"></script>
 
 </body>
+
 </html>
