@@ -2644,6 +2644,14 @@ body.light-mode .section-number {
 .screen-image.product-screen-gallery {
     display: grid;
     gap: 10px;
+    padding: 10px;
+}
+
+.product-screen-frame {
+    overflow: hidden;
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    background: #f7f7f5;
 }
 
 .screen-image img {
