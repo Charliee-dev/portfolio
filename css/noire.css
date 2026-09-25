@@ -2641,6 +2641,11 @@ body.light-mode .section-number {
     background: var(--surface-2);
 }
 
+.screen-image.product-screen-gallery {
+    display: grid;
+    gap: 10px;
+}
+
 .screen-image img {
     display: block;
     width: 100%;
