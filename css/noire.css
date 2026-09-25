@@ -2643,15 +2643,16 @@ body.light-mode .section-number {
 
 .screen-image.product-screen-gallery {
     display: grid;
-    gap: 10px;
-    padding: 10px;
+    gap: 14px;
+    padding: 12px;
 }
 
 .product-screen-frame {
     overflow: hidden;
-    border: 1px solid var(--line-strong);
-    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 10px;
     background: #f7f7f5;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .14);
 }
 
 .screen-image img {
