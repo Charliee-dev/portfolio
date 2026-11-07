@@ -1,1411 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'self'; img-src 'self'; font-src 'self'; style-src 'self'; style-src-elem 'self'; style-src-attr 'none'; script-src 'self' 'sha256-Lzj/FOhJ6SY5LnOLCq6S9bO6aqmGLtaTl5YvFV21X2o='; connect-src 'self'; upgrade-insecure-requests;">
 
-    <meta charset="UTF-8">
+  <title>NOIRE — Fashion E-Commerce Case Study | Chiranjeev Deka</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="canonical" href="https://chiranjeevdeka.com/noire.html">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOIRE is a premium fashion e-commerce platform case study by Chiranjeev Deka combining product design, UI/UX, frontend development, backend systems and payment integration.">
+  <meta name="author" content="Chiranjeev Deka">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f5f7">
 
-    <title>NOIRE — Fashion E-Commerce Case Study | Chiranjeev Deka</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NOIRE — Fashion E-Commerce Case Study">
+  <meta property="og:description" content="Premium fashion e-commerce platform designed and developed by Chiranjeev Deka.">
+  <meta property="og:url" content="https://chiranjeevdeka.com/noire.html">
+  <meta property="og:image" content="https://chiranjeevdeka.com/assets/images/portfolio-preview.png">
 
-    <meta name="description"
-          content="NOIRE is a premium fashion e-commerce platform case study by Chiranjeev Deka combining product design, UI/UX, frontend development, backend systems and payment integration.">
-
-    <meta name="author"
-          content="Chiranjeev Deka">
-
-    <meta name="robots"
-          content="index, follow">
-
-    <link rel="canonical"
-          href="https://chiranjeevdeka.com/noire.html">
-
-    <meta name="theme-color"
-          content="#0b0d10">
-
-    <link rel="icon"
-          type="image/svg+xml"
-          href="assets/favicon.svg">
-
-    <!-- Open Graph -->
-
-    <meta property="og:type"
-          content="website">
-
-    <meta property="og:title"
-          content="NOIRE — Fashion E-Commerce Case Study">
-
-    <meta property="og:description"
-          content="Premium fashion e-commerce platform designed and developed by Chiranjeev Deka.">
-
-    <meta property="og:url"
-          content="https://chiranjeevdeka.com/noire.html">
-
-    <meta property="og:image"
-          content="https://chiranjeevdeka.com/assets/images/portfolio-preview.png">
-
-    <!-- Fonts -->
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
-
-    <!-- CSS -->
-
-    <link rel="stylesheet"
-          href="css/noire.css?v=4cfbe2c">
-    <link rel="stylesheet" href="css/common.css?v=a5de51b">
-
+  <link rel="stylesheet" href="css/minimal.css">
+  <link rel="stylesheet" href="css/portfolio-theme.css">
+  <link rel="stylesheet" href="css/portfolio-utilities.css">
 </head>
 
-
 <body>
+  <div class="progress-bar" aria-hidden="true"></div>
 
-<!-- =====================================================
-     TOP PROGRESS
-===================================================== -->
+  <header class="navbar" role="banner">
+    <div class="nav-inner">
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="nav-mark" href="index.html" aria-label="Chiranjeev Deka home">CD<span aria-hidden="true">.</span></a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="about.html">About</a>
+      </nav>
 
-<div class="top-progress">
-    <div class="top-progress-bar"></div>
-</div>
+      <div class="nav-actions">
+        <div class="availability" aria-label="Availability">
+          <span class="availability-label">Available for</span>
+          <span class="availability-status">UI/UX Internships</span>
+        </div>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.2A8.5 8.5 0 0 1 8.8 3.5 8.5 8.5 0 1 0 20.5 15.2Z"/></svg></button>
+        <a href="assets/Chiranjeev_Deka_UIUX_Resume.pdf" download class="resume-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          <span>Resume</span>
+        </a>
+      </div>
+    </div>
+  </header>
 
+  <!-- Side Navigation -->
+  <nav class="side-nav" aria-label="Case study sections">
+    <div class="side-nav-list">
+      <a href="#overview" class="side-nav-link active"><span class="num">01</span>Overview</a>
+      <a href="#problem" class="side-nav-link"><span class="num">02</span>Problem</a>
+      <a href="#process" class="side-nav-link"><span class="num">03</span>Process</a>
+      <a href="#experience" class="side-nav-link"><span class="num">04</span>Experience</a>
+      <a href="#interface" class="side-nav-link"><span class="num">05</span>Interface</a>
+      <a href="#development" class="side-nav-link"><span class="num">06</span>Development</a>
+      <a href="#outcome" class="side-nav-link"><span class="num">07</span>Outcome</a>
+    </div>
+  </nav>
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
-<header class="navbar">
-    <nav class="nav-container" aria-label="Main navigation">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html" class="active-nav" aria-current="page"><span class="liquid-dot"><span class="inner-dot"></span></span>Projects</a>
-            <a href="about.html">About</a>
+  <main>
+    <!-- Hero -->
+    <section class="case-hero reveal" id="overview">
+      <div class="container">
+        <div class="case-meta">
+          <span>Full Stack Case Study</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>NOIRE / 2026</span>
         </div>
 
-        <div class="right-side">
-            <div class="live-info">
-                <div class="availability-card">
-                    <span class="availability-title">AVAILABLE FOR</span>
-                    <span class="availability-status">UI/UX INTERNSHIPS</span>
+        <h1 class="display-1">NOI<span class="u-text-accent">R</span>E</h1>
+
+        <p class="lead">A premium menswear e-commerce platform designed to make digital shopping feel refined, intuitive and effortless.</p>
+
+        <div class="case-stats">
+          <div class="stat">
+            <div class="stat-value">4</div>
+            <div class="stat-label">Months</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">1</div>
+            <div class="stat-label">Designer</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">1</div>
+            <div class="stat-label">Developer</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="u-mt-12 u-max-w-900 u-ml-auto u-mr-auto u-rounded-xl u-overflow-hidden u-border-subtle">
+        <img class="u-w-full u-h-auto u-block" src="assets/images/noire-homepage.png" alt="NOIRE storefront homepage featuring a menswear campaign" loading="eager">
+      </div>
+    </section>
+
+    <!-- Project Snapshot -->
+    <section class="case-section reveal" aria-labelledby="snapshot-title">
+      <div class="container">
+        <div class="two-col">
+          <div class="section-sidebar">
+            <div class="section-number">01</div>
+            <h3>Project Snapshot</h3>
+          </div>
+          <div class="section-content">
+            <h2 id="snapshot-title" class="display-3">From interface<br>to <em>commerce.</em></h2>
+
+            <div class="grid grid-4 u-mt-8 u-gap-4">
+              <div class="card u-p-5 u-text-center">
+                <div class="u-font-mono u-text-2xl u-font-bold u-text-accent u-mb-2">Role</div>
+                <p class="u-text-secondary u-text-sm">UI/UX Designer, Product Designer, Front-End Developer</p>
+              </div>
+              <div class="card u-p-5 u-text-center">
+                <div class="u-font-mono u-text-2xl u-font-bold u-text-accent u-mb-2">Duration</div>
+                <p class="u-text-secondary u-text-sm">2026</p>
+              </div>
+              <div class="card u-p-5 u-text-center">
+                <div class="u-font-mono u-text-2xl u-font-bold u-text-accent u-mb-2">Design</div>
+                <p class="u-text-secondary u-text-sm">Figma, Photoshop</p>
+              </div>
+              <div class="card u-p-5 u-text-center">
+                <div class="u-font-mono u-text-2xl u-font-bold u-text-accent u-mb-2">Engineering</div>
+                <p class="u-text-secondary u-text-sm">HTML/CSS/JS, Node.js, MongoDB, Razorpay</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement -->
+    <section class="case-section reveal u-bg-soft" aria-labelledby="statement-title">
+      <div class="container u-max-w-720 u-text-center">
+        <h2 id="statement-title" class="display-3">A complete digital commerce experience</h2>
+        <p class="body-lg u-mt-4">NOIRE was created as a complete digital commerce experience — connecting visual design, user experience and full-stack functionality into one product.</p>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="case-section reveal" id="problem" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="two-col">
+          <div class="section-sidebar">
+            <div class="section-number">02</div>
+            <h3>The Problem</h3>
+          </div>
+          <div class="section-content">
+            <h2 id="problem-title" class="display-3">Premium shouldn't<br>mean <em>complicated.</em></h2>
+            <p>Many online fashion stores overwhelm users with cluttered interfaces, inconsistent product browsing and complicated checkout experiences.</p>
+            <p>The challenge was to create a platform that feels premium while keeping product discovery, shopping and checkout simple and intuitive.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Goals -->
+    <section class="case-section reveal" aria-labelledby="goals-title">
+      <div class="container">
+        <div class="two-col">
+          <div class="section-sidebar">
+            <div class="section-number">03</div>
+            <h3>Objectives</h3>
+          </div>
+          <div class="section-content">
+            <h2 id="goals-title" class="display-3">What the product<br>needed to <em>achieve.</em></h2>
+
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="num">01</div>
+                <h4>Premium Experience</h4>
+                <p>Create a refined fashion shopping experience with a strong visual identity.</p>
+              </div>
+              <div class="feature-item">
+                <div class="num">02</div>
+                <h4>Frictionless Shopping</h4>
+                <p>Make product discovery, cart management and checkout straightforward.</p>
+              </div>
+              <div class="feature-item">
+                <div class="num">03</div>
+                <h4>Complete Commerce</h4>
+                <p>Build the complete journey from authentication through payment and order tracking.</p>
+              </div>
+              <div class="feature-item">
+                <div class="num">04</div>
+                <h4>Scalable System</h4>
+                <p>Support product, inventory and order management through an administrative system.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="case-section reveal" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="two-col">
+          <div class="section-sidebar">
+            <div class="section-number">04</div>
+            <h3>Design Process</h3>
+          </div>
+          <div class="section-content">
+            <h2 id="process-title" class="display-3">From idea<br>to <em>interface.</em></h2>
+
+            <div class="u-flex u-flex-col u-gap-6">
+              <div class="card u-p-6 u-border-l-accent">
+                <div class="u-flex u-items-center u-gap-3 u-mb-3">
+                  <span class="u-font-mono u-text-xl u-font-bold u-text-accent">01</span>
+                  <h3 class="title-3 u-m-0">Research</h3>
                 </div>
-                <div class="live-clock">
-                    <span id="clock">00:00</span>
-                    <small>LOCAL TIME</small>
+                <p class="u-text-secondary">Analyse modern fashion brands, shopping patterns and common e-commerce flows.</p>
+              </div>
+              <div class="card u-p-6 u-border-l-muted">
+                <div class="u-flex u-items-center u-gap-3 u-mb-3">
+                  <span class="u-font-mono u-text-xl u-font-bold u-text-tertiary">02</span>
+                  <h3 class="title-3 u-m-0">Structure</h3>
                 </div>
-            </div>
-            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">&#9728;&#65039;</button>
-            <a href="assets/Chiranjeev_Deka_UIUX_Resume.pdf" download class="resume-btn">
-                <span>Download Resume</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-            </a>
-        </div>
-    </nav>
-</header>
-
-
-<!-- =====================================================
-     SIDE HUD
-===================================================== -->
-
-<aside class="side-hud">
-
-    <div class="hud-line"></div>
-
-    <div class="hud-sections">
-
-        <a href="#overview" class="hud-link active">
-            <span>01</span>
-            Overview
-        </a>
-
-        <a href="#problem" class="hud-link">
-            <span>02</span>
-            Problem
-        </a>
-
-        <a href="#process" class="hud-link">
-            <span>03</span>
-            Process
-        </a>
-
-        <a href="#experience" class="hud-link">
-            <span>04</span>
-            Experience
-        </a>
-
-        <a href="#interface" class="hud-link">
-            <span>05</span>
-            Interface
-        </a>
-
-        <a href="#development" class="hud-link">
-            <span>06</span>
-            Development
-        </a>
-
-        <a href="#outcome" class="hud-link">
-            <span>07</span>
-            Outcome
-        </a>
-
-    </div>
-
-    <div class="hud-scroll">
-        <span>SCROLL</span>
-        <span class="scroll-number">00%</span>
-    </div>
-
-</aside>
-
-
-<main>
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero" id="overview">
-
-    <div class="hero-grid"></div>
-
-    <div class="hero-meta reveal">
-
-        <span class="eyebrow">
-            FULL STACK CASE STUDY
-        </span>
-
-        <span class="meta-code">
-            NOIRE / 2026
-        </span>
-
-    </div>
-
-
-    <div class="hero-content">
-
-        <div class="hero-label reveal">
-            <span class="signal"></span>
-            DIGITAL FASHION EXPERIENCE
-        </div>
-
-
-        <h1 class="hero-title reveal">
-
-            <span>NOI</span><span class="accent-letter">R</span><span>E</span>
-
-        </h1>
-
-
-        <div class="hero-bottom">
-
-            <p class="hero-description reveal">
-
-                A premium menswear e-commerce platform designed
-                to make digital shopping feel refined, intuitive
-                and effortless.
-
-            </p>
-
-
-            <div class="hero-scroll reveal">
-
-                <span>SCROLL TO EXPLORE</span>
-
-                <span class="scroll-arrow">↓</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="hero-image-wrap reveal">
-
-        <div class="image-index">
-            001 — 007
-        </div>
-
-        <div class="hero-image">
-
-            <img src="assets/images/noire-homepage.png"
-                 alt="NOIRE storefront homepage featuring a menswear campaign">
-
-            <div class="image-scan"></div>
-
-            <div class="image-corner top-left"></div>
-            <div class="image-corner top-right"></div>
-            <div class="image-corner bottom-left"></div>
-            <div class="image-corner bottom-right"></div>
-
-        </div>
-
-        <div class="image-caption">
-            NOIRE / PRIMARY EXPERIENCE
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     PROJECT SNAPSHOT
-===================================================== -->
-
-<section class="snapshot section">
-
-    <div class="section-number">
-        01
-    </div>
-
-
-    <div class="section-heading">
-
-        <span class="section-kicker">
-            PROJECT SNAPSHOT
-        </span>
-
-        <h2>
-            From interface<br>
-            to <em>commerce.</em>
-        </h2>
-
-    </div>
-
-
-    <div class="snapshot-grid">
-
-        <article class="snapshot-card">
-
-            <span class="card-number">01</span>
-
-            <span class="card-label">ROLE</span>
-
-            <h3>
-                UI/UX Designer<br>
-                Product Designer<br>
-                Front-End Developer
-            </h3>
-
-        </article>
-
-
-        <article class="snapshot-card">
-
-            <span class="card-number">02</span>
-
-            <span class="card-label">DURATION</span>
-
-            <h3>
-                2026
-            </h3>
-
-        </article>
-
-
-        <article class="snapshot-card">
-
-            <span class="card-number">03</span>
-
-            <span class="card-label">DESIGN</span>
-
-            <h3>
-                Figma<br>
-                Photoshop
-            </h3>
-
-        </article>
-
-
-        <article class="snapshot-card">
-
-            <span class="card-number">04</span>
-
-            <span class="card-label">ENGINEERING</span>
-
-            <h3>
-                HTML / CSS<br>
-                JavaScript<br>
-                Node.js / MongoDB<br>
-                Razorpay
-            </h3>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     STATEMENT
-===================================================== -->
-
-<section class="statement section">
-
-    <div class="statement-line"></div>
-
-    <p class="statement-text reveal">
-
-        NOIRE was created as a complete digital commerce
-        experience — connecting visual design, user experience
-        and full-stack functionality into one product.
-
-    </p>
-
-</section>
-
-
-<!-- =====================================================
-     PROBLEM
-===================================================== -->
-
-<section class="split-section section" id="problem">
-
-    <div class="section-number">
-        02
-    </div>
-
-
-    <div class="split-label">
-
-        <span class="section-kicker">
-            THE PROBLEM
-        </span>
-
-        <span class="side-label">
-            02 / 07
-        </span>
-
-    </div>
-
-
-    <div class="split-content">
-
-        <h2>
-            Premium shouldn't<br>
-            mean <em>complicated.</em>
-        </h2>
-
-        <p>
-            Many online fashion stores overwhelm users with
-            cluttered interfaces, inconsistent product browsing
-            and complicated checkout experiences.
-        </p>
-
-        <p>
-            The challenge was to create a platform that feels
-            premium while keeping product discovery, shopping
-            and checkout simple and intuitive.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     GOALS
-===================================================== -->
-
-<section class="goals section">
-
-    <div class="section-number">
-        03
-    </div>
-
-
-    <div class="goals-header">
-
-        <span class="section-kicker">
-            OBJECTIVES
-        </span>
-
-        <h2>
-            What the product<br>
-            needed to <em>achieve.</em>
-        </h2>
-
-    </div>
-
-
-    <div class="goals-list">
-
-        <div class="goal reveal">
-
-            <span>01</span>
-
-            <h3>
-                Premium Experience
-            </h3>
-
-            <p>
-                Create a refined fashion shopping experience
-                with a strong visual identity.
-            </p>
-
-        </div>
-
-
-        <div class="goal reveal">
-
-            <span>02</span>
-
-            <h3>
-                Frictionless Shopping
-            </h3>
-
-            <p>
-                Make product discovery, cart management and
-                checkout straightforward.
-            </p>
-
-        </div>
-
-
-        <div class="goal reveal">
-
-            <span>03</span>
-
-            <h3>
-                Complete Commerce
-            </h3>
-
-            <p>
-                Build the complete journey from authentication
-                through payment and order tracking.
-            </p>
-
-        </div>
-
-
-        <div class="goal reveal">
-
-            <span>04</span>
-
-            <h3>
-                Scalable System
-            </h3>
-
-            <p>
-                Support product, inventory and order management
-                through an administrative system.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     PROCESS
-===================================================== -->
-
-<section class="process section" id="process">
-
-    <div class="section-number">
-        04
-    </div>
-
-
-    <div class="process-header">
-
-        <span class="section-kicker">
-            DESIGN PROCESS
-        </span>
-
-        <h2>
-            From idea<br>
-            to <em>interface.</em>
-        </h2>
-
-    </div>
-
-
-    <div class="process-track">
-
-        <div class="process-step active">
-
-            <span class="process-index">
-                01
-            </span>
-
-            <div>
-                <h3>Research</h3>
-
-                <p>
-                    Analyse modern fashion brands,
-                    shopping patterns and common
-                    e-commerce flows.
-                </p>
-            </div>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <span class="process-index">
-                02
-            </span>
-
-            <div>
-                <h3>Structure</h3>
-
-                <p>
-                    Define navigation, product discovery,
-                    cart and checkout architecture.
-                </p>
-            </div>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <span class="process-index">
-                03
-            </span>
-
-            <div>
-                <h3>Design</h3>
-
-                <p>
-                    Translate the structure into a refined
-                    visual language and high-fidelity UI.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="process-step">
-
-            <span class="process-index">
-                04
-            </span>
-
-            <div>
-                <h3>Build</h3>
-
-                <p>
-                    Connect the interface to authentication,
-                    database, commerce and payment systems.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     EXPERIENCE / FLOW
-===================================================== -->
-
-<section class="experience section" id="experience">
-
-    <div class="section-number">
-        05
-    </div>
-
-
-    <div class="experience-header">
-
-        <span class="section-kicker">
-            USER EXPERIENCE
-        </span>
-
-        <h2>
-            A shopping journey<br>
-            built around <em>flow.</em>
-        </h2>
-
-    </div>
-
-
-    <div class="flow">
-
-        <div class="flow-node">
-
-            <span>01</span>
-            Discover
-
-        </div>
-
-        <div class="flow-connector"></div>
-
-        <div class="flow-node">
-
-            <span>02</span>
-            Explore
-
-        </div>
-
-        <div class="flow-connector"></div>
-
-        <div class="flow-node">
-
-            <span>03</span>
-            Wishlist
-
-        </div>
-
-        <div class="flow-connector"></div>
-
-        <div class="flow-node">
-
-            <span>04</span>
-            Cart
-
-        </div>
-
-        <div class="flow-connector"></div>
-
-        <div class="flow-node">
-
-            <span>05</span>
-            Checkout
-
-        </div>
-
-        <div class="flow-connector"></div>
-
-        <div class="flow-node">
-
-            <span>06</span>
-            Order
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FEATURES
-===================================================== -->
-
-<section class="features section">
-
-    <div class="section-number">
-        06
-    </div>
-
-
-    <div class="features-header">
-
-        <span class="section-kicker">
-            PRODUCT SYSTEM
-        </span>
-
-        <h2>
-            Designed as<br>
-            a <em>system.</em>
-        </h2>
-
-    </div>
-
-
-    <div class="feature-grid">
-
-        <article class="feature-card">
-
-            <span>01</span>
-
-            <h3>
-                Authentication
-            </h3>
-
-            <p>
-                Secure account creation and login
-                workflows.
-            </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-            <span>02</span>
-
-            <h3>
-                Wishlist
-            </h3>
-
-            <p>
-                Save products and return to them
-                later.
-            </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-            <span>03</span>
-
-            <h3>
-                Cart & Checkout
-            </h3>
-
-            <p>
-                Streamlined purchase flow from product
-                selection to payment.
-            </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-            <span>04</span>
-
-            <h3>
-                Razorpay
-            </h3>
-
-            <p>
-                Integrated online payment experience.
-            </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-            <span>05</span>
-
-            <h3>
-                Orders
-            </h3>
-
-            <p>
-                Users can review and track their orders.
-            </p>
-
-        </article>
-
-
-        <article class="feature-card">
-
-            <span>06</span>
-
-            <h3>
-                Admin
-            </h3>
-
-            <p>
-                Product, inventory and order management.
-            </p>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     UI SHOWCASE
-===================================================== -->
-
-<section class="interface section" id="interface">
-
-    <div class="section-number">
-        07
-    </div>
-
-
-    <div class="interface-header">
-
-        <span class="section-kicker">
-            INTERFACE
-        </span>
-
-        <h2>
-            The visual<br>
-            <em>experience.</em>
-        </h2>
-
-        <p>
-            A restrained visual system designed to keep
-            attention on the product while maintaining a
-            premium fashion identity.
-        </p>
-
-    </div>
-
-
-    <div class="screens-grid">
-
-
-        <article class="screen-card screen-large reveal">
-
-            <div class="screen-number">
-                01
-            </div>
-
-            <div class="screen-image">
-
-                <img src="assets/images/noire-homepage.png"
-                     alt="NOIRE homepage with menswear campaign and shop collection button"
-                     loading="lazy">
-
-                <span class="screen-hover">
-                    EXPLORE ↗
-                </span>
-
-            </div>
-
-            <div class="screen-info">
-
-                <h3>Homepage</h3>
-
-                <span>
-                    PRIMARY EXPERIENCE
-                </span>
-
-            </div>
-
-        </article>
-
-
-        <article class="screen-card reveal">
-
-            <div class="screen-number">
-                02
-            </div>
-
-            <div class="screen-image product-screen-gallery">
-
-                <div class="product-screen-frame">
-                    <img src="assets/images/noire-product-detail.png"
-                         alt="NOIRE product detail page for a light blue oversized cotton shirt"
-                         loading="lazy">
+                <p class="u-text-secondary">Define navigation, product discovery, cart and checkout architecture.</p>
+              </div>
+              <div class="card u-p-6 u-border-l-muted">
+                <div class="u-flex u-items-center u-gap-3 u-mb-3">
+                  <span class="u-font-mono u-text-xl u-font-bold u-text-tertiary">03</span>
+                  <h3 class="title-3 u-m-0">Design</h3>
                 </div>
-
-                <div class="product-screen-frame">
-                    <img src="assets/images/noire-relaxed-fit-product.png"
-                         alt="NOIRE product detail page for a blue relaxed fit shirt"
-                         loading="lazy">
+                <p class="u-text-secondary">Translate the structure into a refined visual language and high-fidelity UI.</p>
+              </div>
+              <div class="card u-p-6 u-border-l-muted">
+                <div class="u-flex u-items-center u-gap-3 u-mb-3">
+                  <span class="u-font-mono u-text-xl u-font-bold u-text-tertiary">04</span>
+                  <h3 class="title-3 u-m-0">Build</h3>
                 </div>
+                <p class="u-text-secondary">Connect the interface to authentication, database, commerce and payment systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <span class="screen-hover">
-                    EXPLORE ↗
-                </span>
+    <!-- Experience -->
+    <section class="case-section reveal" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="two-col">
+          <div class="section-sidebar">
+            <div class="section-number">05</div>
+            <h3>User Experience</h3>
+          </div>
+          <div class="section-content">
+            <h2 id="experience-title" class="display-3">A shopping journey<br>built around <em>flow.</em></h2>
 
+            <div class="u-flex u-items-center u-justify-center u-gap-3 u-flex-wrap u-mt-8 u-p-6 u-bg-surface u-border-subtle u-rounded-xl">
+              <div class="u-flex u-flex-col u-items-center u-gap-1">
+                <span class="u-font-mono u-text-lg u-font-bold u-text-accent">01</span>
+                <span class="u-text-sm u-font-medium u-text-secondary">Discover</span>
+              </div>
+              <svg class="u-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--line)" stroke-width="2"><polyline points="5 12 12 19 19 12"/></svg>
+              <div class="u-flex u-flex-col u-items-center u-gap-1">
+                <span class="u-font-mono u-text-lg u-font-bold u-text-tertiary">02</span>
+                <span class="u-text-sm u-font-medium u-text-secondary">Explore</span>
+              </div>
+              <svg class="u-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--line)" stroke-width="2"><polyline points="5 12 12 19 19 12"/></svg>
+              <div class="u-flex u-flex-col u-items-center u-gap-1">
+                <span class="u-font-mono u-text-lg u-font-bold u-text-tertiary">03</span>
+                <span class="u-text-sm u-font-medium u-text-secondary">Wishlist</span>
+              </div>
+              <svg class="u-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--line)" stroke-width="2"><polyline points="5 12 12 19 19 12"/></svg>
+              <div class="u-flex u-flex-col u-items-center u-gap-1">
+                <span class="u-font-mono u-text-lg u-font-bold u-text-tertiary">04</span>
+                <span class="u-text-sm u-font-medium u-text-secondary">Cart</span>
+              </div>
+              <svg class="u-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--line)" stroke-width="2"><polyline points="5 12 12 19 19 12"/></svg>
+              <div class="u-flex u-flex-col u-items-center u-gap-1">
+                <span class="u-font-mono u-text-lg u-font-bold u-text-tertiary">05</span>
+                <span class="u-text-sm u-font-medium u-text-secondary">Checkout</span>
+              </div>
+              <svg class="u-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--line)" stroke-width="2"><polyline points="5 12 12 19 19 12"/></svg>
+              <div class="u-flex u-flex-col u-items-center u-gap-1">
+                <span class="u-font-mono u-text-lg u-font-bold u-text-tertiary">06</span>
+                <span class="u-text-sm u-font-medium u-text-secondary">Order</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="case-section reveal" id="interface" aria-labelledby="features-title">
+      <div class="container">
+        <div class="two-col">
+          <div class="section-sidebar">
+            <div class="section-number">06</div>
+            <h3>Product System</h3>
+          </div>
+          <div class="section-content">
+            <h2 id="features-title" class="display-3">Designed as<br>a <em>system.</em></h2>
+            <p>A complete product system with six core features working seamlessly together.</p>
+
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="num">01</div>
+                <h4>Authentication</h4>
+                <p>Secure account creation and login workflows.</p>
+              </div>
+              <div class="feature-item">
+                <div class="num">02</div>
+                <h4>Wishlist</h4>
+                <p>Save products and return to them later.</p>
+              </div>
+              <div class="feature-item">
+                <div class="num">03</div>
+                <h4>Cart & Checkout</h4>
+                <p>Streamlined purchase flow from product selection to payment.</p>
+              </div>
+              <div class="feature-item">
+                <div class="num">04</div>
+                <h4>Razorpay</h4>
+                <p>Integrated online payment experience.</p>
+              </div>
+              <div class="feature-item">
+                <div class="num">05</div>
+                <h4>Orders</h4>
+                <p>Users can review and track their orders.</p>
+              </div>
+              <div class="feature-item">
+                <div class="num">06</div>
+                <h4>Admin</h4>
+                <p>Product, inventory and order management.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UI Showcase -->
+    <section class="case-section reveal" aria-labelledby="ui-title">
+      <div class="container">
+        <div class="two-col">
+          <div class="section-sidebar">
+            <div class="section-number">07</div>
+            <h3>Interface</h3>
+          </div>
+          <div class="section-content">
+            <h2 id="ui-title" class="display-3">The visual<br><em>experience.</em></h2>
+            <p>A restrained visual system designed to keep attention on the product while maintaining a premium fashion identity.</p>
+
+            <div class="gallery gallery-3 gallery--landscape" data-lightbox-gallery="noire">
+              <figure class="gallery-item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open NOIRE homepage preview" data-lightbox="assets/images/noire-homepage.png" data-caption="Homepage — Primary Experience">
+                <img src="assets/images/noire-homepage.png" alt="NOIRE homepage" loading="lazy">
+                <figcaption class="gallery-caption">Homepage — Primary Experience</figcaption>
+              </figure>
+              <figure class="gallery-item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open NOIRE product detail preview" data-lightbox="assets/images/noire-product-detail.png" data-caption="Product Detail — Discovery">
+                <img src="assets/images/noire-product-detail.png" alt="NOIRE product detail" loading="lazy">
+                <figcaption class="gallery-caption">Product Detail — Discovery</figcaption>
+              </figure>
+              <figure class="gallery-item" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="lightbox" aria-label="Open NOIRE cart preview" data-lightbox="assets/images/noire-cart.png" data-caption="Cart — Purchase Flow">
+                <img src="assets/images/noire-cart.png" alt="NOIRE shopping cart" loading="lazy">
+                <figcaption class="gallery-caption">Cart — Purchase Flow</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development -->
+    <section class="case-section reveal" id="development" aria-labelledby="dev-title">
+      <div class="container">
+        <div class="two-col">
+          <div class="section-sidebar">
+            <div class="section-number">08</div>
+            <h3>Development</h3>
+          </div>
+          <div class="section-content">
+            <h2 id="dev-title" class="display-3">Where design<br>meets <em>engineering.</em></h2>
+
+            <div class="stack-tabs" role="tablist" aria-label="Technology stack">
+              <button id="stack-tab-frontend" class="stack-tab active" data-stack="frontend" role="tab" aria-controls="stack-panel-frontend" aria-selected="true" tabindex="0">Frontend</button>
+              <button id="stack-tab-backend" class="stack-tab" data-stack="backend" role="tab" aria-controls="stack-panel-backend" aria-selected="false" tabindex="-1">Backend</button>
+              <button id="stack-tab-commerce" class="stack-tab" data-stack="commerce" role="tab" aria-controls="stack-panel-commerce" aria-selected="false" tabindex="-1">Commerce</button>
+              <button id="stack-tab-design" class="stack-tab" data-stack="design" role="tab" aria-controls="stack-panel-design" aria-selected="false" tabindex="-1">Design</button>
             </div>
 
-            <div class="screen-info">
-
-                <h3>Product</h3>
-
-                <span>
-                    PRODUCT DISCOVERY
-                </span>
-
-            </div>
-
-        </article>
-
-
-
-
-
-        <article class="screen-card screen-large reveal">
-
-            <div class="screen-number">
-                03
-            </div>
-
-            <div class="screen-image">
-
-                <img src="assets/images/noire-cart.png?v=cc84b94"
-                     alt="NOIRE shopping cart with product list, quantity controls, and order summary"
-                     loading="lazy">
-
-                <span class="screen-hover">
-                    EXPLORE ↗
-                </span>
-
-            </div>
-
-            <div class="screen-info">
-
-                <h3>Cart</h3>
-
-                <span>
-                    PURCHASE FLOW
-                </span>
-
-            </div>
-
-        </article>
-
-
-
-
-
-
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     DEVELOPMENT
-===================================================== -->
-
-<section class="development section" id="development">
-
-    <div class="section-number">
-        08
-    </div>
-
-
-    <div class="development-header">
-
-        <span class="section-kicker">
-            DEVELOPMENT
-        </span>
-
-        <h2>
-            Where design<br>
-            meets <em>engineering.</em>
-        </h2>
-
-    </div>
-
-
-    <div class="stack-system" role="tablist" aria-label="Technology stack">
-
-
-        <button class="stack-tab active"
-                data-stack="frontend">
-
-            FRONTEND
-
-        </button>
-
-
-        <button class="stack-tab"
-                data-stack="backend">
-
-            BACKEND
-
-        </button>
-
-
-        <button class="stack-tab"
-                data-stack="commerce">
-
-            COMMERCE
-
-        </button>
-
-
-        <button class="stack-tab"
-                data-stack="design">
-
-            DESIGN
-
-        </button>
-
-
-    </div>
-
-
-    <div class="stack-content">
-
-
-        <div class="stack-panel active"
-             data-panel="frontend">
-
-            <span class="stack-index">
-                01 / 04
-            </span>
-
-            <h3>
-                Interface Layer
-            </h3>
-
-            <div class="stack-tags">
-
+            <div id="stack-panel-frontend" class="stack-panel active" data-panel="frontend" role="tabpanel" aria-labelledby="stack-tab-frontend" tabindex="0">
+              <div class="stack-tags">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
                 <span>Responsive UI</span>
-
+              </div>
             </div>
-
-        </div>
-
-
-        <div class="stack-panel"
-             data-panel="backend">
-
-            <span class="stack-index">
-                02 / 04
-            </span>
-
-            <h3>
-                Application Layer
-            </h3>
-
-            <div class="stack-tags">
-
+            <div id="stack-panel-backend" class="stack-panel" data-panel="backend" role="tabpanel" aria-labelledby="stack-tab-backend" tabindex="0" hidden>
+              <div class="stack-tags">
                 <span>Node.js</span>
                 <span>Express</span>
                 <span>MongoDB</span>
-
+              </div>
             </div>
-
-        </div>
-
-
-        <div class="stack-panel"
-             data-panel="commerce">
-
-            <span class="stack-index">
-                03 / 04
-            </span>
-
-            <h3>
-                Commerce Layer
-            </h3>
-
-            <div class="stack-tags">
-
+            <div id="stack-panel-commerce" class="stack-panel" data-panel="commerce" role="tabpanel" aria-labelledby="stack-tab-commerce" tabindex="0" hidden>
+              <div class="stack-tags">
                 <span>Razorpay</span>
                 <span>Orders</span>
                 <span>Inventory</span>
                 <span>Checkout</span>
-
+              </div>
             </div>
-
-        </div>
-
-
-        <div class="stack-panel"
-             data-panel="design">
-
-            <span class="stack-index">
-                04 / 04
-            </span>
-
-            <h3>
-                Design Layer
-            </h3>
-
-            <div class="stack-tags">
-
+            <div id="stack-panel-design" class="stack-panel" data-panel="design" role="tabpanel" aria-labelledby="stack-tab-design" tabindex="0" hidden>
+              <div class="stack-tags">
                 <span>Figma</span>
                 <span>Photoshop</span>
                 <span>UX Research</span>
                 <span>Wireframing</span>
-
+              </div>
             </div>
-
+          </div>
         </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CHALLENGES
-===================================================== -->
-
-<section class="challenge split-section section">
-
-    <div class="section-number">
-        09
-    </div>
-
-
-    <div class="split-label">
-
-        <span class="section-kicker">
-            CHALLENGES
-        </span>
-
-    </div>
-
-
-    <div class="split-content">
-
-        <h2>
-            Connecting<br>
-            every <em>layer.</em>
-        </h2>
-
-        <p>
-            One of the biggest challenges was connecting
-            the frontend and backend into a seamless
-            user experience.
-        </p>
-
-        <p>
-            Authentication, cart management, order
-            processing, stock updates and payment
-            verification all needed to work together
-            while maintaining a clean interface.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CONTRIBUTION
-===================================================== -->
-
-<section class="contribution section">
-
-    <div class="section-number">
-        10
-    </div>
-
-
-    <div class="contribution-header">
-
-        <span class="section-kicker">
-            MY CONTRIBUTION
-        </span>
-
-        <h2>
-            End-to-end<br>
-            <em>ownership.</em>
-        </h2>
-
-    </div>
-
-
-    <div class="contribution-grid">
-
-        <span>UX Research</span>
-        <span>Wireframing</span>
-        <span>Visual Design</span>
-        <span>Frontend Development</span>
-        <span>Backend Development</span>
-        <span>Database Design</span>
-        <span>Payment Integration</span>
-        <span>Deployment & Testing</span>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     OUTCOME
-===================================================== -->
-
-<section class="outcome section" id="outcome">
-
-    <div class="section-number">
-        11
-    </div>
-
-
-    <div class="outcome-content">
-
-        <span class="section-kicker">
-            OUTCOME
-        </span>
-
-        <h2>
-            A complete<br>
-            commerce <em>ecosystem.</em>
-        </h2>
-
-        <p>
-            NOIRE evolved into a complete fashion commerce
-            ecosystem, allowing users to browse products,
-            manage wishlists, complete purchases securely
-            and track orders while administrators manage
-            inventory and products through a dedicated
-            dashboard.
-        </p>
-
-    </div>
-
-
-    <div class="learning">
-
-        <span class="section-kicker">
-            KEY LEARNING
-        </span>
-
-        <p>
-            Through NOIRE, I strengthened my understanding
-            of product design, user flows, frontend development,
-            backend architecture and payment integrations.
-            The project helped me understand how design and
-            development work together to create complete
-            digital products from concept to deployment.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CTA
-===================================================== -->
-
-<section class="final-cta section">
-
-    <div class="cta-grid"></div>
-
-
-    <span class="section-kicker">
-        EXPERIENCE NOIRE
-    </span>
-
-
-    <h2>
-        See the product<br>
-        <em>in action.</em>
-    </h2>
-
-
-    <div class="cta-buttons">
-
-        <a href="https://noire-beta.vercel.app/index.html"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="primary-btn magnetic">
-
-            <span>Live Demo</span>
-            <span>↗</span>
-
-        </a>
-
-
-        <a href="https://github.com/Charliee-dev/noire"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="secondary-btn magnetic">
-
-            <span>GitHub Repository</span>
-            <span>↗</span>
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FOOTER NAVIGATION
-===================================================== -->
-
-<footer class="footer-nav">
-
-    <a href="projects.html"
-       class="footer-link magnetic">
-
-        <span>←</span>
-
+      </div>
+    </section>
+
+    <!-- Challenges -->
+    <section class="case-section reveal" aria-labelledby="challenge-title">
+      <div class="container">
+        <div class="two-col">
+          <div class="section-sidebar">
+            <div class="section-number">09</div>
+            <h3>Challenges</h3>
+          </div>
+          <div class="section-content">
+            <h2 id="challenge-title" class="display-3">Connecting<br>every <em>layer.</em></h2>
+            <p>One of the biggest challenges was connecting the frontend and backend into a seamless user experience.</p>
+            <p>Authentication, cart management, order processing, stock updates and payment verification all needed to work together while maintaining a clean interface.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contribution -->
+    <section class="case-section reveal u-bg-soft" aria-labelledby="contrib-title">
+      <div class="container u-max-w-720 u-text-center">
+        <div class="section-header">
+          <span class="section-label">My contribution</span>
+          <h2 id="contrib-title" class="display-3">End-to-end<br><em>ownership.</em></h2>
+        </div>
+        <div class="feature-list u-grid-auto-fit-180 u-place-center">
+          <div class="feature-item u-text-center"><div class="num">01</div><h4>UX Research</h4></div>
+          <div class="feature-item u-text-center"><div class="num">02</div><h4>Wireframing</h4></div>
+          <div class="feature-item u-text-center"><div class="num">03</div><h4>Visual Design</h4></div>
+          <div class="feature-item u-text-center"><div class="num">04</div><h4>Frontend Dev</h4></div>
+          <div class="feature-item u-text-center"><div class="num">05</div><h4>Backend Dev</h4></div>
+          <div class="feature-item u-text-center"><div class="num">06</div><h4>Database Design</h4></div>
+          <div class="feature-item u-text-center"><div class="num">07</div><h4>Payment Integration</h4></div>
+          <div class="feature-item u-text-center"><div class="num">08</div><h4>Deployment</h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcome -->
+    <section class="case-section reveal" id="outcome" aria-labelledby="outcome-title">
+      <div class="container">
+        <div class="two-col">
+          <div class="section-sidebar">
+            <div class="section-number">10</div>
+            <h3>Outcome</h3>
+          </div>
+          <div class="section-content">
+            <h2 id="outcome-title" class="display-3">A complete<br>commerce <em>ecosystem.</em></h2>
+            <p>NOIRE evolved into a complete fashion commerce ecosystem, allowing users to browse products, manage wishlists, complete purchases securely and track orders while administrators manage inventory and products through a dedicated dashboard.</p>
+
+            <div class="u-mt-10 u-p-6 u-bg-surface u-border-subtle u-rounded-xl u-border-l-success">
+              <div class="u-font-mono u-text-xs u-font-semibold u-tracking-wide u-uppercase u-text-success u-mb-2">Key Learning</div>
+              <p class="u-text-secondary">Through NOIRE, I strengthened my understanding of product design, user flows, frontend development, backend architecture and payment integrations. The project helped me understand how design and development work together to create complete digital products from concept to deployment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="case-section reveal u-text-center u-bg-soft" aria-labelledby="cta-title">
+      <div class="container">
+        <span class="section-label">Experience NOIRE</span>
+        <h2 id="cta-title" class="display-3">See the product<br><em>in action.</em></h2>
+        <div class="u-flex u-gap-3 u-justify-center u-flex-wrap u-mt-8">
+          <a class="btn btn-primary" href="https://noire-beta.vercel.app/index.html" target="_blank" rel="noopener noreferrer">Live Demo <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <a class="btn btn-secondary" href="https://github.com/Charliee-dev/noire" target="_blank" rel="noopener noreferrer">GitHub Repository <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Nav -->
+    <footer class="case-footer-nav" role="navigation" aria-label="Project navigation">
+      <a href="projects.html" class="case-nav-link prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
         <div>
-            <small>PREVIOUS</small>
-            <strong>Projects</strong>
+          <span class="label">Previous</span>
+          <span class="title">Projects</span>
         </div>
-
-    </a>
-
-
-    <div class="footer-center">
-
-        <span>NOIRE</span>
-
-        <small>
-            CASE STUDY / 2026
-        </small>
-
-    </div>
-
-
-    <a href="velix.html"
-       class="footer-link footer-next magnetic">
-
+      </a>
+      <div class="u-text-center u-font-mono u-text-sm u-font-semibold u-text-tertiary">NOIRE / 2026</div>
+      <a href="velix.html" class="case-nav-link next">
         <div>
-            <small>NEXT PROJECT</small>
-            <strong>VELIX</strong>
+          <span class="label">Next Project</span>
+          <span class="title">VELIX</span>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </footer>
+  </main>
 
-        <span>→</span>
+  <!-- Site Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Chiranjeev Deka</h3>
+        <p>UI/UX Designer crafting modern digital experiences through design, motion and interaction.</p>
+      </div>
 
-    </a>
+      <nav class="footer-col" aria-label="Navigation">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+      </nav>
 
-</footer>
+      <nav class="footer-col" aria-label="Connect">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/chiranjeevdeka_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:chiranjeevdeka@outlook.in">Email</a>
+      </nav>
 
-
-</main>
-
-<footer class="site-footer">
-    <div class="footer-content">
-        <div class="footer-left">
-            <h2>CHIRANJEEV</h2>
-            <p>UI/UX Designer crafting modern digital experiences through design, motion and interaction.</p>
-        </div>
-        <div class="footer-links">
-            <h4>NAVIGATION</h4>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
-        </div>
-        <div class="footer-links">
-            <h4>CONNECT</h4>
-            <a href="https://www.instagram.com/chiranjeevdeka_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="mailto:chiranjeevdeka@outlook.in">Email</a>
-        </div>
-        <div class="footer-socials">
-            <h4>SHOWCASE</h4>
-            <a href="https://github.com/Charliee-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/chiranjeevdekauiux/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
+      <nav class="footer-col" aria-label="Showcase">
+        <h4>Showcase</h4>
+        <a href="https://github.com/Charliee-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/chiranjeevdekauiux/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
     </div>
+
     <div class="footer-bottom">
-        <span>&copy; 2026 Chiranjeev Deka. All Rights Reserved.</span>
-        <span>Designed and Built by Chiranjeev Deka</span>
+      <span id="copyright"></span>
+      <span>Designed and Built by Chiranjeev Deka</span>
     </div>
-</footer>
+  </footer>
 
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close">×</button>
+    <img id="lightbox-img" alt="">
+    <span id="lightbox-caption" class="lightbox-caption"></span>
+  </div>
 
-<!-- =====================================================
-     JS
-===================================================== -->
-
-<script src="js/common.js?v=a5de51b"></script>
-<script src="js/noire.js?v=a5de51b"></script>
-
+  <script src="js/minimal.js"></script>
 </body>
 </html>
