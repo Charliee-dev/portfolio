@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url=/projects.html">
+  <link rel="canonical" href="https://chiranjeevdeka.com/projects">
+  <title>Projects — Chiranjeev Deka</title>
+  <script>window.location.replace(`/projects.html${window.location.search}${window.location.hash}`);</script>
+</head>
+<body>
+  <p>Opening <a href="/projects.html">Projects</a>…</p>
+</body>
+</html>
