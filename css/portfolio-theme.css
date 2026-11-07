@@ -414,3 +414,47 @@ html.js .reveal.visible { transform: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Small-screen, touch, and embedded-browser resilience. */
+main, section, article, .container, .nav-inner, .footer-grid { min-width: 0; }
+body { overflow-x: clip; }
+img, video, iframe { max-width: 100%; }
+button, a, [role="button"] { -webkit-tap-highlight-color: transparent; }
+
+@media (max-width: 360px) {
+  .nav-inner { padding-inline: 16px; gap: 8px; }
+  .nav-links { gap: 8px; }
+  .nav-links a { min-height: 44px; display: inline-flex; align-items: center; font-size: 12px; }
+  .nav-mark { margin-right: 0; }
+  .nav-actions { gap: 4px; }
+  .theme-toggle { width: 44px; height: 44px; flex: none; }
+  .resume-btn { min-height: 40px; padding-inline: 10px; }
+  .container { padding-inline: 20px; }
+  .home-intro .hero-actions { align-items: stretch; }
+  .home-intro .hero-actions .btn { min-height: 44px; padding-inline: 14px; }
+  .case-stats { gap: 18px 12px; }
+  .gallery { gap: 12px; }
+}
+
+@media (max-width: 680px) {
+  .nav-links a, .resume-btn, .theme-toggle { min-height: 44px; }
+  .project-card--velix .project-visual,
+  .project-card--upcoming .project-visual { min-height: 0; }
+  .project-card--velix .project-visual img { height: auto; max-height: 420px; }
+  .gallery-item { touch-action: manipulation; }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .card-interactive:hover { transform: none; }
+  .gallery-item:hover img, .project-card--velix:hover .project-visual img,
+  .featured-project:hover .featured-bg { transform: none; }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .hero { min-height: auto; padding-block: calc(var(--header-h) + 32px) 48px; }
+}
+
+@supports (padding: max(0px)) {
+  .navbar { padding-top: env(safe-area-inset-top); }
+  .footer { padding-bottom: max(0px, env(safe-area-inset-bottom)); }
+}
