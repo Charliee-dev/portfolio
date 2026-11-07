@@ -1,14 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=/about.html">
-  <link rel="canonical" href="https://chiranjeevdeka.com/about">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'self'; img-src 'self'; font-src 'self'; style-src 'self'; style-src-elem 'self'; style-src-attr 'none'; script-src 'self' 'sha256-Lzj/FOhJ6SY5LnOLCq6S9bO6aqmGLtaTl5YvFV21X2o='; connect-src 'self'; upgrade-insecure-requests;">
+
   <title>About — Chiranjeev Deka</title>
-  <script>window.location.replace(`/about.html${window.location.search}${window.location.hash}`);</script>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="canonical" href="https://chiranjeevdeka.com/about">
+
+  <meta name="description" content="About Chiranjeev Deka, UI/UX designer and front-end developer creating thoughtful digital experiences.">
+  <meta name="author" content="Chiranjeev Deka">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f5f5f7">
+
+  <link rel="stylesheet" href="/css/minimal.css">
+  <link rel="stylesheet" href="/css/portfolio-theme.css">
+  <link rel="stylesheet" href="/css/portfolio-utilities.css">
 </head>
+
 <body>
-  <p>Opening <a href="/about.html">About</a>…</p>
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="navbar" role="banner">
+    <div class="nav-inner">
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="nav-mark" href="/" aria-label="Chiranjeev Deka home">CD<span aria-hidden="true">.</span></a>
+        <a href="/projects">Projects</a>
+        <a href="/about" aria-current="page">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="availability" aria-label="Availability">
+          <span class="availability-label">Available for</span>
+          <span class="availability-status">UI/UX Internships</span>
+        </div>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.2A8.5 8.5 0 0 1 8.8 3.5 8.5 8.5 0 1 0 20.5 15.2Z"/></svg></button>
+        <a href="assets/Chiranjeev_Deka_UIUX_Resume.pdf" download class="resume-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          <span>Resume</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Hero -->
+    <section class="hero reveal" aria-labelledby="about-title">
+      <div class="container hero-content about-intro">
+        <div class="hero-badge">Independent designer · Guwahati, India</div>
+
+        <h1 id="about-title" class="display-1">Chiranjeev<br><span>Deka</span></h1>
+
+        <p class="lead">I design clear, useful digital products for web and mobile, then bring those ideas to life in code.</p>
+
+        <p class="body-lg about-supporting-copy">I bring product thinking, visual design, and interaction together to shape polished experiences from the first idea through to the finished interface.</p>
+
+        <div class="about-skills" aria-label="Areas of practice">
+          <span>Product design</span>
+          <span>UI/UX</span>
+          <span>Front-end development</span>
+          <span>Interaction design</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Philosophy -->
+    <section class="section reveal" aria-labelledby="philosophy-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">How I work</span>
+          <h2 id="philosophy-title" class="display-3">Design philosophy</h2>
+        </header>
+
+        <div class="grid grid-3 principles-grid">
+          <article class="principle reveal">
+            <span class="principle-number">01</span>
+            <h3>Start with people</h3>
+            <p>I think through user goals, the product structure, and the details that make an interface feel natural.</p>
+          </article>
+
+          <article class="principle reveal">
+            <span class="principle-number">02</span>
+            <h3>Make details count</h3>
+            <p>Clear hierarchy, thoughtful visual systems, and purposeful motion help each screen feel connected and easy to follow.</p>
+          </article>
+
+          <article class="principle reveal">
+            <span class="principle-number">03</span>
+            <h3>Build it real</h3>
+            <p>I also work in front-end code, which helps me carry design decisions through to responsive, working interfaces.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-cta reveal" aria-labelledby="contact-title">
+      <div class="container contact-cta-inner">
+        <div>
+          <span class="section-label">Get in touch</span>
+          <h2 id="contact-title">Have a project<br>in mind?</h2>
+        </div>
+        <div class="contact-cta-action">
+          <p>I am open to UI/UX internship opportunities and conversations about thoughtful digital products.</p>
+          <a class="btn btn-primary" href="mailto:chiranjeevdeka@outlook.in">Start a conversation <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Chiranjeev Deka</h3>
+        <p>UI/UX Designer crafting modern digital experiences through design, motion and interaction.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Navigation">
+        <h4>Navigation</h4>
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/about">About</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Connect">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/chiranjeevdeka_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:chiranjeevdeka@outlook.in">Email</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Showcase">
+        <h4>Showcase</h4>
+        <a href="https://github.com/Charliee-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/chiranjeevdekauiux/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span id="copyright"></span>
+      <span>Designed and Built by Chiranjeev Deka</span>
+    </div>
+  </footer>
+
+  <script src="/js/minimal.js"></script>
 </body>
 </html>
