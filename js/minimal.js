@@ -8,6 +8,17 @@
   /* ---- Utils ---- */
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+  const HomeUrl = {
+    normalize() {
+      if (!/\/index\.html$/i.test(window.location.pathname)) return;
+      const cleanPath = window.location.pathname.replace(/index\.html$/i, "");
+      window.history.replaceState(
+        window.history.state,
+        "",
+        `${cleanPath}${window.location.search}${window.location.hash}`
+      );
+    }
+  };
   const Copyright = {
     init() {
       const year = new Date().getFullYear();
@@ -256,6 +267,7 @@
   };
 
   function init() {
+    HomeUrl.normalize();
     document.documentElement.classList.add("js");
     Theme.init();
     Copyright.init();
